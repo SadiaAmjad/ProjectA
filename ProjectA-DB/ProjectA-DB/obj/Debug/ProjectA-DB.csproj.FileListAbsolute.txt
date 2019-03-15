@@ -1,0 +1,16 @@
+C:\Users\DR AQSA\Desktop\ProjectA-DB\ProjectA-DB\bin\Debug\ProjectA-DB.exe
+C:\Users\DR AQSA\Desktop\ProjectA-DB\ProjectA-DB\bin\Debug\ProjectA-DB.exe.config
+C:\Users\DR AQSA\Desktop\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA_DB.AddInformation.resources
+C:\Users\DR AQSA\Desktop\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA_DB.FYPM.resources
+C:\Users\DR AQSA\Desktop\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA_DB.Properties.Resources.resources
+C:\Users\DR AQSA\Desktop\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA-DB.csproj.GenerateResource.cache
+C:\Users\DR AQSA\Desktop\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA-DB.csproj.CoreCompileInputs.cache
+C:\Users\DR AQSA\Desktop\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA-DB.exe
+C:\Users\DR AQSA\Desktop\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA-DB.pdb
+C:\Users\DR AQSA\Desktop\ProjectA-DB\ProjectA-DB\bin\Debug\ProjectA-DB.pdb
+C:\Users\DR AQSA\Desktop\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA-DB.csprojAssemblyReference.cache
+C:\Users\DR AQSA\Desktop\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA_DB.ManageStudent.resources
+C:\Users\DR AQSA\Desktop\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA_DB.ManageProject.resources
+C:\Users\DR AQSA\Desktop\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA_DB.ManageEvaluation.resources
+C:\Users\DR AQSA\Desktop\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA_DB.AddAdvisorInformation.resources
+C:\Users\DR AQSA\Desktop\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA_DB.ManageAdvisor.resources
