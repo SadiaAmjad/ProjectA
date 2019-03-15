@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddInformation));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cancel1 = new System.Windows.Forms.Button();
+            this.Submit = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
             this.FirstName = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -49,13 +51,15 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Submit = new System.Windows.Forms.Button();
-            this.cancel1 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -75,14 +79,8 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.PeachPuff;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.cancel1);
-            this.panel1.Controls.Add(this.Submit);
-            this.panel1.Controls.Add(this.clear);
+            this.panel1.BackColor = System.Drawing.Color.LightCyan;
+            this.panel1.Controls.Add(this.tableLayoutPanel4);
             this.panel1.Controls.Add(this.FirstName);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.FirstName1);
@@ -97,19 +95,58 @@
             this.panel1.Controls.Add(this.DateOfBirth);
             this.panel1.Controls.Add(this.Contact);
             this.panel1.Controls.Add(this.Email);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(517, 444);
             this.panel1.TabIndex = 37;
             // 
+            // cancel1
+            // 
+            this.cancel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancel1.BackColor = System.Drawing.Color.LightCyan;
+            this.cancel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cancel1.BackgroundImage")));
+            this.cancel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancel1.ForeColor = System.Drawing.Color.Transparent;
+            this.cancel1.Location = new System.Drawing.Point(179, 3);
+            this.cancel1.Name = "cancel1";
+            this.cancel1.Size = new System.Drawing.Size(79, 29);
+            this.cancel1.TabIndex = 37;
+            this.cancel1.Text = "Cancel";
+            this.cancel1.UseVisualStyleBackColor = false;
+            this.cancel1.Click += new System.EventHandler(this.cancel1_Click);
+            // 
+            // Submit
+            // 
+            this.Submit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Submit.BackColor = System.Drawing.Color.LightCyan;
+            this.Submit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Submit.BackgroundImage")));
+            this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Submit.ForeColor = System.Drawing.Color.Transparent;
+            this.Submit.Location = new System.Drawing.Point(96, 3);
+            this.Submit.Name = "Submit";
+            this.Submit.Size = new System.Drawing.Size(77, 29);
+            this.Submit.TabIndex = 36;
+            this.Submit.Text = "Submit";
+            this.Submit.UseVisualStyleBackColor = false;
+            this.Submit.Click += new System.EventHandler(this.Submit_Click);
+            // 
             // clear
             // 
+            this.clear.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.clear.BackColor = System.Drawing.Color.LightCyan;
+            this.clear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("clear.BackgroundImage")));
             this.clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear.ForeColor = System.Drawing.Color.Black;
-            this.clear.Location = new System.Drawing.Point(158, 380);
+            this.clear.ForeColor = System.Drawing.Color.Transparent;
+            this.clear.Location = new System.Drawing.Point(3, 3);
             this.clear.Name = "clear";
-            this.clear.Size = new System.Drawing.Size(75, 23);
+            this.clear.Size = new System.Drawing.Size(87, 29);
             this.clear.TabIndex = 35;
             this.clear.Text = "Clear";
             this.clear.UseVisualStyleBackColor = false;
@@ -117,12 +154,14 @@
             // 
             // FirstName
             // 
-            this.FirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.FirstName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.FirstName.AutoSize = true;
             this.FirstName.BackColor = System.Drawing.Color.Transparent;
             this.FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstName.ForeColor = System.Drawing.Color.White;
-            this.FirstName.Location = new System.Drawing.Point(158, 40);
+            this.FirstName.ForeColor = System.Drawing.Color.Black;
+            this.FirstName.Location = new System.Drawing.Point(158, 55);
             this.FirstName.Name = "FirstName";
             this.FirstName.Size = new System.Drawing.Size(73, 16);
             this.FirstName.TabIndex = 22;
@@ -130,10 +169,12 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(161, 238);
+            this.dateTimePicker1.Location = new System.Drawing.Point(161, 253);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(243, 20);
             this.dateTimePicker1.TabIndex = 32;
@@ -141,56 +182,73 @@
             // 
             // FirstName1
             // 
-            this.FirstName1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.FirstName1.Location = new System.Drawing.Point(158, 59);
+            this.FirstName1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FirstName1.BackColor = System.Drawing.Color.LightCyan;
+            this.FirstName1.Location = new System.Drawing.Point(158, 74);
             this.FirstName1.Name = "FirstName1";
             this.FirstName1.Size = new System.Drawing.Size(246, 20);
             this.FirstName1.TabIndex = 15;
             // 
             // Gender1
             // 
-            this.Gender1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Gender1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Gender1.BackColor = System.Drawing.Color.LightCyan;
             this.Gender1.FormattingEnabled = true;
             this.Gender1.Items.AddRange(new object[] {
             "Female",
             "Male"});
-            this.Gender1.Location = new System.Drawing.Point(158, 281);
+            this.Gender1.Location = new System.Drawing.Point(158, 296);
             this.Gender1.Name = "Gender1";
             this.Gender1.Size = new System.Drawing.Size(246, 21);
             this.Gender1.TabIndex = 31;
             // 
             // LastANme1
             // 
-            this.LastANme1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.LastANme1.Location = new System.Drawing.Point(158, 103);
+            this.LastANme1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LastANme1.BackColor = System.Drawing.Color.LightCyan;
+            this.LastANme1.Location = new System.Drawing.Point(158, 118);
             this.LastANme1.Name = "LastANme1";
             this.LastANme1.Size = new System.Drawing.Size(246, 20);
             this.LastANme1.TabIndex = 16;
             // 
             // Contact1
             // 
-            this.Contact1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Contact1.Location = new System.Drawing.Point(158, 149);
+            this.Contact1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Contact1.BackColor = System.Drawing.Color.LightCyan;
+            this.Contact1.Location = new System.Drawing.Point(158, 164);
             this.Contact1.Name = "Contact1";
             this.Contact1.Size = new System.Drawing.Size(246, 20);
             this.Contact1.TabIndex = 17;
             // 
             // Email1
             // 
-            this.Email1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.Email1.Location = new System.Drawing.Point(161, 192);
+            this.Email1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Email1.BackColor = System.Drawing.Color.LightCyan;
+            this.Email1.Location = new System.Drawing.Point(161, 207);
             this.Email1.Name = "Email1";
             this.Email1.Size = new System.Drawing.Size(243, 20);
             this.Email1.TabIndex = 18;
             // 
             // Gender
             // 
-            this.Gender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Gender.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Gender.AutoSize = true;
             this.Gender.BackColor = System.Drawing.Color.Transparent;
             this.Gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Gender.ForeColor = System.Drawing.Color.White;
-            this.Gender.Location = new System.Drawing.Point(159, 263);
+            this.Gender.ForeColor = System.Drawing.Color.Black;
+            this.Gender.Location = new System.Drawing.Point(159, 278);
             this.Gender.Name = "Gender";
             this.Gender.Size = new System.Drawing.Size(53, 16);
             this.Gender.TabIndex = 28;
@@ -198,20 +256,25 @@
             // 
             // RegistrationNumber1
             // 
-            this.RegistrationNumber1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.RegistrationNumber1.Location = new System.Drawing.Point(158, 323);
+            this.RegistrationNumber1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.RegistrationNumber1.BackColor = System.Drawing.Color.LightCyan;
+            this.RegistrationNumber1.Location = new System.Drawing.Point(158, 338);
             this.RegistrationNumber1.Name = "RegistrationNumber1";
             this.RegistrationNumber1.Size = new System.Drawing.Size(246, 20);
             this.RegistrationNumber1.TabIndex = 21;
             // 
             // RegistrationNumber
             // 
-            this.RegistrationNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.RegistrationNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.RegistrationNumber.AutoSize = true;
             this.RegistrationNumber.BackColor = System.Drawing.Color.Transparent;
             this.RegistrationNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegistrationNumber.ForeColor = System.Drawing.Color.White;
-            this.RegistrationNumber.Location = new System.Drawing.Point(160, 304);
+            this.RegistrationNumber.ForeColor = System.Drawing.Color.Black;
+            this.RegistrationNumber.Location = new System.Drawing.Point(160, 319);
             this.RegistrationNumber.Name = "RegistrationNumber";
             this.RegistrationNumber.Size = new System.Drawing.Size(131, 16);
             this.RegistrationNumber.TabIndex = 27;
@@ -219,12 +282,14 @@
             // 
             // LastName
             // 
-            this.LastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.LastName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.LastName.AutoSize = true;
             this.LastName.BackColor = System.Drawing.Color.Transparent;
             this.LastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastName.ForeColor = System.Drawing.Color.White;
-            this.LastName.Location = new System.Drawing.Point(158, 84);
+            this.LastName.ForeColor = System.Drawing.Color.Black;
+            this.LastName.Location = new System.Drawing.Point(158, 99);
             this.LastName.Name = "LastName";
             this.LastName.Size = new System.Drawing.Size(73, 16);
             this.LastName.TabIndex = 23;
@@ -232,12 +297,14 @@
             // 
             // DateOfBirth
             // 
-            this.DateOfBirth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.DateOfBirth.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DateOfBirth.AutoSize = true;
             this.DateOfBirth.BackColor = System.Drawing.Color.Transparent;
             this.DateOfBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateOfBirth.ForeColor = System.Drawing.Color.White;
-            this.DateOfBirth.Location = new System.Drawing.Point(160, 215);
+            this.DateOfBirth.ForeColor = System.Drawing.Color.Black;
+            this.DateOfBirth.Location = new System.Drawing.Point(160, 230);
             this.DateOfBirth.Name = "DateOfBirth";
             this.DateOfBirth.Size = new System.Drawing.Size(82, 16);
             this.DateOfBirth.TabIndex = 26;
@@ -245,12 +312,14 @@
             // 
             // Contact
             // 
-            this.Contact.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Contact.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Contact.AutoSize = true;
             this.Contact.BackColor = System.Drawing.Color.Transparent;
             this.Contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Contact.ForeColor = System.Drawing.Color.White;
-            this.Contact.Location = new System.Drawing.Point(158, 130);
+            this.Contact.ForeColor = System.Drawing.Color.Black;
+            this.Contact.Location = new System.Drawing.Point(158, 145);
             this.Contact.Name = "Contact";
             this.Contact.Size = new System.Drawing.Size(53, 16);
             this.Contact.TabIndex = 24;
@@ -258,12 +327,14 @@
             // 
             // Email
             // 
-            this.Email.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Email.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Email.AutoSize = true;
             this.Email.BackColor = System.Drawing.Color.Transparent;
             this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.ForeColor = System.Drawing.Color.White;
-            this.Email.Location = new System.Drawing.Point(160, 173);
+            this.Email.ForeColor = System.Drawing.Color.Black;
+            this.Email.Location = new System.Drawing.Point(160, 188);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(42, 16);
             this.Email.TabIndex = 25;
@@ -274,7 +345,8 @@
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.LightCyan;
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tableLayoutPanel2.BackgroundImage")));
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.panel2, 0, 0);
@@ -291,7 +363,7 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.LightSalmon;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
@@ -300,41 +372,44 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.LightCyan;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(280, 444);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Submit
+            // tableLayoutPanel4
             // 
-            this.Submit.BackColor = System.Drawing.Color.LightCyan;
-            this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Submit.ForeColor = System.Drawing.Color.Black;
-            this.Submit.Location = new System.Drawing.Point(239, 380);
-            this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(75, 23);
-            this.Submit.TabIndex = 36;
-            this.Submit.Text = "Submit";
-            this.Submit.UseVisualStyleBackColor = false;
-            this.Submit.Click += new System.EventHandler(this.Submit_Click);
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 362F));
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 391);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(517, 53);
+            this.tableLayoutPanel4.TabIndex = 44;
             // 
-            // cancel1
+            // tableLayoutPanel5
             // 
-            this.cancel1.BackColor = System.Drawing.Color.LightCyan;
-            this.cancel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel1.ForeColor = System.Drawing.Color.Black;
-            this.cancel1.Location = new System.Drawing.Point(330, 380);
-            this.cancel1.Name = "cancel1";
-            this.cancel1.Size = new System.Drawing.Size(75, 23);
-            this.cancel1.TabIndex = 37;
-            this.cancel1.Text = "Cancel";
-            this.cancel1.UseVisualStyleBackColor = false;
-            this.cancel1.Click += new System.EventHandler(this.cancel1_Click);
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.tableLayoutPanel5.Controls.Add(this.cancel1, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.Submit, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.clear, 0, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(158, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(261, 35);
+            this.tableLayoutPanel5.TabIndex = 42;
             // 
             // AddInformation
             // 
@@ -343,6 +418,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddInformation";
             this.Text = "Add Information";
             this.Load += new System.EventHandler(this.AddInformation_Load);
@@ -352,6 +428,8 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -376,9 +454,11 @@
         private System.Windows.Forms.Label Email;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button clear;
         private System.Windows.Forms.Button cancel1;
         private System.Windows.Forms.Button Submit;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
     }
 }

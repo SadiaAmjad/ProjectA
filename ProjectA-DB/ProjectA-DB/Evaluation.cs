@@ -33,7 +33,7 @@ namespace ProjectA_DB
             else
             {
                 name = val;
-                MessageBox.Show("Name Successfully Entered!");
+               // MessageBox.Show("Name Successfully Entered!");
 
             }
         }
@@ -64,7 +64,7 @@ namespace ProjectA_DB
             else
             {
                 TotalMarks = totalMarks;
-                MessageBox.Show("Successfully Entered total marks");
+                //MessageBox.Show("Successfully Entered total marks");
             }
         }
         public string getTotalMarks()
@@ -98,7 +98,7 @@ namespace ProjectA_DB
             else
             {
                 TotalWeightage = totalweightage;
-                MessageBox.Show("Successfully Entered total weightage");
+               // MessageBox.Show("Successfully Entered total weightage");
             }
         }
         public string getTotalweightage()

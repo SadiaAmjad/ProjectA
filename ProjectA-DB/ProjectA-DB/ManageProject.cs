@@ -22,14 +22,14 @@ namespace ProjectA_DB
         private void Clear_Click(object sender, EventArgs e)
         {
             ProjectTitle1.Clear();
-            ProjectDescription.Text = "";
+            textBox1.Text = "";
            
         }
 
         private void cancel_Click(object sender, EventArgs e)
         {
             ProjectTitle1.Clear();
-            ProjectDescription.Text = "";
+            textBox1.Text = "";
             FYPM o = new FYPM();
             o.Show();
             this.Hide();
@@ -209,6 +209,7 @@ namespace ProjectA_DB
 
         private void Clear_Click_1(object sender, EventArgs e)
         {
+            
             ProjectTitle1.Clear();
             textBox1.Clear();
         }
@@ -285,6 +286,11 @@ namespace ProjectA_DB
             PTitle.Clear();
             PDescription.Clear();
             UpdateProject.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

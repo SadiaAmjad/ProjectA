@@ -148,9 +148,7 @@ namespace ProjectA_DB
 
         private void creat_Click(object sender, EventArgs e)
         {
-            AddAdvisorInformation k = new AddAdvisorInformation();
-            k.Show();
-            this.Hide();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -351,6 +349,13 @@ namespace ProjectA_DB
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddAdvisorInformation k = new AddAdvisorInformation();
+            k.Show();
+            this.Hide();
         }
     }
 }

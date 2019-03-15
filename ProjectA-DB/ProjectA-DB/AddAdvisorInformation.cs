@@ -35,22 +35,16 @@ namespace ProjectA_DB
 
         private void cancel_Click(object sender, EventArgs e)
         {
-            FirstName1.Clear();
-            LastANme1.Clear();
-            // RegistrationNumber1.Text = "";
-            Contact1.Text = "";
-            Email1.Text = "";
-            Gender1.Text = "";
-            dateTimePicker1.Text = "";
-            Desgnation1.Text = "";
-            salary1.Text = "";
-            ManageAdvisor p = new ManageAdvisor();
-            p.Show();
-            this.Hide();
+           
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+        }
+
+        private void Submit1_Click(object sender, EventArgs e)
+        {
+
             try
             {
                 Advisor s1 = new Advisor();
@@ -62,7 +56,7 @@ namespace ProjectA_DB
                 s1.setGender(Gender1.Text);
                 s1.setDesignation(Desgnation1.Text);
                 s1.setSalary(salary1.Text);
-                bool i = false, j = false, k = false, l = false, m = false, n = false, o = false,p=false;
+                bool i = false, j = false, k = false, l = false, m = false, n = false, o = false, p = false;
                 if (s1.getFirstName() == null)
                 {
                     i = true;
@@ -93,7 +87,7 @@ namespace ProjectA_DB
                 }
                 if (s1.getSalary() == null)
                 {
-                     p= true;
+                    p = true;
                 }
                 if (i == true || j == true || k == true || l == true || m == true || n == true || o == true || p == true)
                 {
@@ -151,13 +145,29 @@ namespace ProjectA_DB
                         MessageBox.Show("Please Enter the details");
                     }
                 }
-               
+
             }
-            
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void cancel1_Click(object sender, EventArgs e)
+        {
+            FirstName1.Clear();
+            LastANme1.Clear();
+            // RegistrationNumber1.Text = "";
+            Contact1.Text = "";
+            Email1.Text = "";
+            Gender1.Text = "";
+            dateTimePicker1.Text = "";
+            Desgnation1.Text = "";
+            salary1.Text = "";
+            ManageAdvisor p = new ManageAdvisor();
+            p.Show();
+            this.Hide();
         }
     }
 }

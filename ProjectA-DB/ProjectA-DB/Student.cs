@@ -70,7 +70,7 @@ namespace ProjectA_DB
             else
             {
                 FirstName = val;
-                MessageBox.Show("First Name Successfully Entered!");
+               // MessageBox.Show("First Name Successfully Entered!");
 
             }
         }
@@ -105,7 +105,7 @@ namespace ProjectA_DB
             else
             {
                 LastName = val;
-                MessageBox.Show("Last Name Successfully Entered!");
+                //MessageBox.Show("Last Name Successfully Entered!");
             }
         }
         /// <summary>
@@ -193,7 +193,7 @@ namespace ProjectA_DB
                 if (n == false)
                 {
                     registration_number = regNo;
-                    MessageBox.Show("Registration Number Entered Sucessfully!:");
+                  //  MessageBox.Show("Registration Number Entered Sucessfully!:");
 
                 }
             }
@@ -262,7 +262,7 @@ namespace ProjectA_DB
                 if (n == false)
                 {
                     registration_number = regNo;
-                    MessageBox.Show("Registration Number Entered Sucessfully!:");
+                    //MessageBox.Show("Registration Number Entered Sucessfully!:");
 
                 }
             }
@@ -289,7 +289,7 @@ namespace ProjectA_DB
                 {
 
                     Contact = ContactNo;
-                    MessageBox.Show("contact Entered Successfully");
+                  //  MessageBox.Show("contact Entered Successfully");
                 }
                 else
                 {
@@ -322,7 +322,7 @@ namespace ProjectA_DB
                 {
 
                     Email = email;
-                    MessageBox.Show("Email Entered Successfully");
+                    //MessageBox.Show("Email Entered Successfully");
                 }
                 else
                 {

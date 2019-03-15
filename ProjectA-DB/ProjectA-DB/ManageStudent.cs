@@ -21,9 +21,7 @@ namespace ProjectA_DB
 
         private void creat_Click(object sender, EventArgs e)
         {
-            AddInformation o = new AddInformation();
-            o.Show();
-            this.Hide();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -373,6 +371,13 @@ namespace ProjectA_DB
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Add_Click(object sender, EventArgs e)
+        {
+            AddInformation o = new AddInformation();
+            o.Show();
+            this.Hide();
         }
     }
 }

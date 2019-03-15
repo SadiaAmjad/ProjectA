@@ -31,7 +31,7 @@ namespace ProjectA_DB
                 {
 
                     salary = Salary;
-                    MessageBox.Show("Salary Entered Successfully");
+                    //MessageBox.Show("Salary Entered Successfully");
                 }
                 else
                 {
@@ -96,7 +96,7 @@ namespace ProjectA_DB
             else
             {
                 FirstName = val;
-                MessageBox.Show("First Name Successfully Entered!");
+                //MessageBox.Show("First Name Successfully Entered!");
 
             }
         }
@@ -125,7 +125,7 @@ namespace ProjectA_DB
             else
             {
                 LastName = val;
-                MessageBox.Show("Last Name Successfully Entered!");
+                //MessageBox.Show("Last Name Successfully Entered!");
 
             }
         }
@@ -143,7 +143,7 @@ namespace ProjectA_DB
                 {
 
                     Contact = ContactNo;
-                    MessageBox.Show("Contact Entered Successfully");
+                  //  MessageBox.Show("Contact Entered Successfully");
                 }
                 else
                 {
@@ -171,7 +171,7 @@ namespace ProjectA_DB
                 {
 
                     Email = email;
-                    MessageBox.Show("Email Entered Successfully");
+                    //MessageBox.Show("Email Entered Successfully");
                 }
                 else
                 {
