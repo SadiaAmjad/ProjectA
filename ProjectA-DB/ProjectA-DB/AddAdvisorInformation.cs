@@ -156,7 +156,10 @@ namespace ProjectA_DB
 
         private void cancel1_Click(object sender, EventArgs e)
         {
-            FirstName1.Clear();
+            ManageAdvisor k = new ManageAdvisor();
+            k.Show();
+            this.Close();
+            /*FirstName1.Clear();
             LastANme1.Clear();
             // RegistrationNumber1.Text = "";
             Contact1.Text = "";
@@ -167,7 +170,7 @@ namespace ProjectA_DB
             salary1.Text = "";
             ManageAdvisor p = new ManageAdvisor();
             p.Show();
-            this.Hide();
+            this.Hide();*/
         }
     }
 }

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddAdvisorInformation));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.clear = new System.Windows.Forms.Button();
             this.FirstName = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -45,23 +46,22 @@
             this.Contact = new System.Windows.Forms.Label();
             this.Email = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.cancel1 = new System.Windows.Forms.Button();
+            this.Submit1 = new System.Windows.Forms.Button();
             this.salary1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Desgnation1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.cancel1 = new System.Windows.Forms.Button();
-            this.Submit1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -75,7 +75,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 491F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 450F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(265, 450);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
@@ -91,6 +91,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(259, 444);
             this.panel2.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(259, 444);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // clear
             // 
@@ -284,6 +295,68 @@
             this.panel1.Size = new System.Drawing.Size(529, 444);
             this.panel1.TabIndex = 37;
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 382F));
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel3, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 391);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(529, 53);
+            this.tableLayoutPanel4.TabIndex = 43;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.tableLayoutPanel3.Controls.Add(this.cancel1, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.Submit1, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.clear, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(150, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(261, 35);
+            this.tableLayoutPanel3.TabIndex = 42;
+            // 
+            // cancel1
+            // 
+            this.cancel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cancel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cancel1.BackgroundImage")));
+            this.cancel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancel1.ForeColor = System.Drawing.Color.Transparent;
+            this.cancel1.Location = new System.Drawing.Point(179, 3);
+            this.cancel1.Name = "cancel1";
+            this.cancel1.Size = new System.Drawing.Size(79, 29);
+            this.cancel1.TabIndex = 40;
+            this.cancel1.Text = "Cancel";
+            this.cancel1.UseVisualStyleBackColor = true;
+            this.cancel1.Click += new System.EventHandler(this.cancel1_Click);
+            // 
+            // Submit1
+            // 
+            this.Submit1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Submit1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Submit1.BackgroundImage")));
+            this.Submit1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Submit1.ForeColor = System.Drawing.Color.Transparent;
+            this.Submit1.Location = new System.Drawing.Point(92, 3);
+            this.Submit1.Name = "Submit1";
+            this.Submit1.Size = new System.Drawing.Size(81, 29);
+            this.Submit1.TabIndex = 41;
+            this.Submit1.Text = "Submit";
+            this.Submit1.UseVisualStyleBackColor = true;
+            this.Submit1.Click += new System.EventHandler(this.Submit1_Click);
+            // 
             // salary1
             // 
             this.salary1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -353,79 +426,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(535, 450);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
-            // cancel1
-            // 
-            this.cancel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cancel1.BackgroundImage")));
-            this.cancel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel1.ForeColor = System.Drawing.Color.Transparent;
-            this.cancel1.Location = new System.Drawing.Point(179, 3);
-            this.cancel1.Name = "cancel1";
-            this.cancel1.Size = new System.Drawing.Size(79, 29);
-            this.cancel1.TabIndex = 40;
-            this.cancel1.Text = "Cancel";
-            this.cancel1.UseVisualStyleBackColor = true;
-            this.cancel1.Click += new System.EventHandler(this.cancel1_Click);
-            // 
-            // Submit1
-            // 
-            this.Submit1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Submit1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Submit1.BackgroundImage")));
-            this.Submit1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Submit1.ForeColor = System.Drawing.Color.Transparent;
-            this.Submit1.Location = new System.Drawing.Point(92, 3);
-            this.Submit1.Name = "Submit1";
-            this.Submit1.Size = new System.Drawing.Size(81, 29);
-            this.Submit1.TabIndex = 41;
-            this.Submit1.Text = "Submit";
-            this.Submit1.UseVisualStyleBackColor = true;
-            this.Submit1.Click += new System.EventHandler(this.Submit1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(259, 444);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tableLayoutPanel3.Controls.Add(this.cancel1, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.Submit1, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.clear, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(150, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(261, 35);
-            this.tableLayoutPanel3.TabIndex = 42;
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 382F));
-            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel3, 1, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 391);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(529, 53);
-            this.tableLayoutPanel4.TabIndex = 43;
-            // 
             // AddAdvisorInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,12 +438,12 @@
             this.Text = "Add Advisor Information";
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

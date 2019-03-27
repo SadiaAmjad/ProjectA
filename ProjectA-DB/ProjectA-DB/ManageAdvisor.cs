@@ -205,7 +205,7 @@ namespace ProjectA_DB
         {
             FYPM o = new FYPM();
             o.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void Clear_Click(object sender, EventArgs e)
@@ -355,7 +355,7 @@ namespace ProjectA_DB
         {
             AddAdvisorInformation k = new AddAdvisorInformation();
             k.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

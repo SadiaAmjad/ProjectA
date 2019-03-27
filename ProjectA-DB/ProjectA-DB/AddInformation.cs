@@ -148,7 +148,10 @@ namespace ProjectA_DB
 
         private void cancel1_Click(object sender, EventArgs e)
         {
-            FirstName1.Clear();
+            this.Close();
+            ManageStudent s = new ManageStudent();
+            s.Show();
+            /*FirstName1.Clear();
             LastANme1.Clear();
             RegistrationNumber1.Text = "";
             Contact1.Text = "";
@@ -158,7 +161,7 @@ namespace ProjectA_DB
             //this.Hide();
             ManageStudent o = new ManageStudent();
             o.Show();
-            this.Hide();
+            this.Hide();*/
         }
     }
     

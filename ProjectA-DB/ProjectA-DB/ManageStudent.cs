@@ -365,7 +365,7 @@ namespace ProjectA_DB
         {
             FYPM h = new FYPM();
             h.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -377,7 +377,7 @@ namespace ProjectA_DB
         {
             AddInformation o = new AddInformation();
             o.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

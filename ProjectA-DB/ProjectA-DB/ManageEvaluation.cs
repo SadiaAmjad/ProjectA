@@ -21,10 +21,10 @@ namespace ProjectA_DB
         
         private void Cancel_Click_1(object sender, EventArgs e)
         {
-            name1.Clear();
+            /*name1.Clear();
             totalmarks1.Clear();
-            totalweightage1.Clear();
-            this.Hide();
+            totalweightage1.Clear();*/
+            this.Close();
             FYPM k = new FYPM();
             k.Show();
         }

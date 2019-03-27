@@ -75,13 +75,13 @@ namespace ProjectA_DB
             }
         }
 
-        private void Back_Click(object sender, EventArgs e)
+        /*private void Back_Click(object sender, EventArgs e)
         {
             FYPM g = new FYPM();
             g.Show();
-            this.Hide();
+            this.Close();
         }
-
+        */
         private void Retrieve_Click(object sender, EventArgs e)
         {
             try
@@ -202,7 +202,7 @@ namespace ProjectA_DB
         {
             ProjectTitle1.Clear();
             textBox1.Clear();
-            this.Hide();
+            this.Close();
             FYPM k = new FYPM();
             k.Show();
         }

@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageStudent));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.UpdateData = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.Clear = new System.Windows.Forms.Button();
-            this.cancel = new System.Windows.Forms.Button();
             this.Update1 = new System.Windows.Forms.Button();
+            this.cancel = new System.Windows.Forms.Button();
             this.FirstName = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.FirstName1 = new System.Windows.Forms.TextBox();
@@ -51,22 +53,21 @@
             this.Contact = new System.Windows.Forms.Label();
             this.Email = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.Back = new System.Windows.Forms.Button();
+            this.Student = new System.Windows.Forms.Label();
+            this.Add = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Back = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Add = new System.Windows.Forms.Button();
-            this.Student = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.UpdateData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -117,14 +118,43 @@
             this.UpdateData.Controls.Add(this.DateOfBirth);
             this.UpdateData.Controls.Add(this.Contact);
             this.UpdateData.Controls.Add(this.Email);
-            this.UpdateData.Dock = System.Windows.Forms.DockStyle.Top;
-            this.UpdateData.Location = new System.Drawing.Point(0, 0);
+            this.UpdateData.Location = new System.Drawing.Point(38, 210);
             this.UpdateData.Name = "UpdateData";
             this.UpdateData.Size = new System.Drawing.Size(794, 450);
             this.UpdateData.TabIndex = 7;
             this.UpdateData.TabStop = false;
             this.UpdateData.Text = "Update Student Data";
             this.UpdateData.Enter += new System.EventHandler(this.UpdateData_Enter);
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 564F));
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 382);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(788, 65);
+            this.tableLayoutPanel4.TabIndex = 50;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.tableLayoutPanel5.Controls.Add(this.Clear, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.Update1, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.cancel, 2, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(227, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(261, 35);
+            this.tableLayoutPanel5.TabIndex = 42;
             // 
             // Clear
             // 
@@ -140,20 +170,6 @@
             this.Clear.UseVisualStyleBackColor = true;
             this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
-            // cancel
-            // 
-            this.cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cancel.BackgroundImage")));
-            this.cancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel.ForeColor = System.Drawing.Color.Transparent;
-            this.cancel.Location = new System.Drawing.Point(179, 3);
-            this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(79, 29);
-            this.cancel.TabIndex = 48;
-            this.cancel.Text = "Cancel";
-            this.cancel.UseVisualStyleBackColor = true;
-            this.cancel.Click += new System.EventHandler(this.cancel_Click);
-            // 
             // Update1
             // 
             this.Update1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Update1.BackgroundImage")));
@@ -167,6 +183,20 @@
             this.Update1.Text = "Update";
             this.Update1.UseVisualStyleBackColor = true;
             this.Update1.Click += new System.EventHandler(this.Update1_Click);
+            // 
+            // cancel
+            // 
+            this.cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cancel.BackgroundImage")));
+            this.cancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancel.ForeColor = System.Drawing.Color.Transparent;
+            this.cancel.Location = new System.Drawing.Point(179, 3);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(79, 29);
+            this.cancel.TabIndex = 48;
+            this.cancel.Text = "Cancel";
+            this.cancel.UseVisualStyleBackColor = true;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
             // FirstName
             // 
@@ -348,98 +378,24 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.LightCyan;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Update,
-            this.Delete});
+            this.Delete,
+            this.Column1});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.GridColor = System.Drawing.Color.LightCyan;
             this.dataGridView1.Location = new System.Drawing.Point(0, 164);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGreen;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGreen;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Size = new System.Drawing.Size(794, 280);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Update
-            // 
-            this.Update.HeaderText = "Update";
-            this.Update.Name = "Update";
-            this.Update.Text = "Update";
-            this.Update.UseColumnTextForButtonValue = true;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            this.Delete.Text = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
-            // 
-            // Back
-            // 
-            this.Back.BackColor = System.Drawing.Color.LightCyan;
-            this.Back.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Back.ForeColor = System.Drawing.Color.Black;
-            this.Back.Location = new System.Drawing.Point(239, 81);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(99, 30);
-            this.Back.TabIndex = 8;
-            this.Back.Text = "Back";
-            this.Back.UseVisualStyleBackColor = false;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.LightCyan;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(126, 81);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 30);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Retrieve";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Add
-            // 
-            this.Add.BackColor = System.Drawing.Color.LightCyan;
-            this.Add.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.ForeColor = System.Drawing.Color.Black;
-            this.Add.Location = new System.Drawing.Point(3, 81);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(117, 30);
-            this.Add.TabIndex = 8;
-            this.Add.Text = "Add";
-            this.Add.UseVisualStyleBackColor = false;
-            this.Add.Click += new System.EventHandler(this.Add_Click);
-            // 
-            // Student
-            // 
-            this.Student.AutoSize = true;
-            this.Student.BackColor = System.Drawing.Color.Transparent;
-            this.Student.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Student.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Student.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Student.ForeColor = System.Drawing.Color.White;
-            this.Student.Location = new System.Drawing.Point(126, 0);
-            this.Student.Name = "Student";
-            this.Student.Size = new System.Drawing.Size(107, 78);
-            this.Student.TabIndex = 8;
-            this.Student.Text = "Student";
-            this.Student.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tableLayoutPanel2
             // 
@@ -462,35 +418,86 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(341, 114);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
-            // tableLayoutPanel4
+            // Back
             // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 564F));
-            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 1, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 382);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(788, 65);
-            this.tableLayoutPanel4.TabIndex = 50;
+            this.Back.BackColor = System.Drawing.Color.LightCyan;
+            this.Back.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back.ForeColor = System.Drawing.Color.Black;
+            this.Back.Location = new System.Drawing.Point(239, 81);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(99, 30);
+            this.Back.TabIndex = 8;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = false;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
-            // tableLayoutPanel5
+            // Student
             // 
-            this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tableLayoutPanel5.Controls.Add(this.Clear, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.Update1, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.cancel, 2, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(227, 3);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(261, 35);
-            this.tableLayoutPanel5.TabIndex = 42;
+            this.Student.AutoSize = true;
+            this.Student.BackColor = System.Drawing.Color.Transparent;
+            this.Student.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Student.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Student.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Student.ForeColor = System.Drawing.Color.White;
+            this.Student.Location = new System.Drawing.Point(126, 0);
+            this.Student.Name = "Student";
+            this.Student.Size = new System.Drawing.Size(107, 78);
+            this.Student.TabIndex = 8;
+            this.Student.Text = "Student";
+            this.Student.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // Add
+            // 
+            this.Add.BackColor = System.Drawing.Color.LightCyan;
+            this.Add.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add.ForeColor = System.Drawing.Color.Black;
+            this.Add.Location = new System.Drawing.Point(3, 81);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(117, 30);
+            this.Add.TabIndex = 8;
+            this.Add.Text = "Add";
+            this.Add.UseVisualStyleBackColor = false;
+            this.Add.Click += new System.EventHandler(this.Add_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightCyan;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(126, 81);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 30);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Retrieve";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Update
+            // 
+            this.Update.HeaderText = "Update";
+            this.Update.Name = "Update";
+            this.Update.Text = "Update";
+            this.Update.UseColumnTextForButtonValue = true;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Image = ((System.Drawing.Image)(resources.GetObject("Column1.Image")));
+            this.Column1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Column1.Name = "Column1";
             // 
             // ManageStudent
             // 
@@ -506,11 +513,11 @@
             this.panel2.ResumeLayout(false);
             this.UpdateData.ResumeLayout(false);
             this.UpdateData.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -538,8 +545,6 @@
         private System.Windows.Forms.Label Contact;
         private System.Windows.Forms.Label Email;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewButtonColumn Update;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Button Add;
@@ -547,5 +552,8 @@
         private System.Windows.Forms.Label Student;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.DataGridViewButtonColumn Update;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
     }
 }

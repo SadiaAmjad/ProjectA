@@ -17,20 +17,15 @@ namespace ProjectA_DB
         {
             InitializeComponent();
             //this.Hide();
-            
+           
         }
-
+       
         private void creat_Click(object sender, EventArgs e)
         {
             
         }
 
         private void FYPM_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button1_Click(object sender, EventArgs e)
         {
            
         }
@@ -43,11 +38,6 @@ namespace ProjectA_DB
         }
 
         
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-       
-        }
 
         private void Clear_Click(object sender, EventArgs e)
         {
@@ -76,38 +66,75 @@ namespace ProjectA_DB
             o.Show();
             this.Hide();
         }
-        private void button1_Click_1(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-           
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+
+            ManageAdvisor p = new ManageAdvisor();
+            p.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
             ManageStudent o = new ManageStudent();
             o.Show();
             this.Hide();
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void button2_Click_2(object sender, EventArgs e)
         {
             ManageProject q1 = new ManageProject();
             q1.Show();
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
+
             ManageEvaluation o = new ManageEvaluation();
             o.Show();
             this.Hide();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button5_Click_1(object sender, EventArgs e)
         {
-            ManageAdvisor p = new ManageAdvisor();
-            p.Show();
-            this.Hide();
+            Group k = new Group();
+            k.Show();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            groupStudent s = new groupStudent();
+            s.Show();
         }
     }
 }

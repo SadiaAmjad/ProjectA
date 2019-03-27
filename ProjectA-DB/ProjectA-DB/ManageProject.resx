@@ -130,12 +130,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAztUA68AAAbvJHdcAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="Update.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="Clear1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAlMAAAIdCAMAAAAuzQjGAAAABGdBTUEAALGPC/xhBQAAAAZQTFRFZqGC
@@ -172,6 +166,12 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAztUA68AAAbvJHdcAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="Update.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAkAAAAAAAEAIAC7LgAAlgAAAICAAAABACAAKAgBAFEvAABgYAAAAQAgAKiUAAB5NwEASEgAAAEA

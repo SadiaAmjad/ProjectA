@@ -12,6 +12,41 @@ namespace ProjectA_DB
         private string name;
         private string TotalMarks;
         private string TotalWeightage;
+        private string ObtainedMarks;
+        
+        public void setObtainedMarks(string val)
+        {
+            bool f = false;
+            foreach (char c in val)
+            {
+
+                if (!(c >= '0' && c <= '9'))
+                {
+                    f = true;
+                }
+            }
+            if (f == true)
+            {
+
+                MessageBox.Show("Obtained marks should be integer valued");
+            }
+            else if (val == "")
+            {
+                MessageBox.Show("Please Enter total marks");
+            }
+            else
+            {
+                ObtainedMarks = val;
+                //MessageBox.Show("Successfully Entered total marks");
+            }
+        }
+        public string getObtainedMarks()
+        {
+            return ObtainedMarks;
+        }
+
+
+
         public void SetName(string val)
         {
             bool f = false;
