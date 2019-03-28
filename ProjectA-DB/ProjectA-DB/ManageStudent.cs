@@ -26,27 +26,7 @@ namespace ProjectA_DB
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlConnection con = new SqlConnection(conString);
-                con.Open();
-                string query = "Select p.Id, p.FirstName,p.LastName,p.Contact,p.Email,p.DateOfBirth,p.Gender,s.RegistrationNo from Person as p Inner join Student as s on p.Id = s.Id ";
-                SqlCommand b = new SqlCommand(query, con);
-                SqlDataAdapter ad = new SqlDataAdapter(query, con);
-
-                DataTable dt = new DataTable();
-                ad.Fill(dt);
-                dataGridView1.DataSource = dt;
-                dataGridView1.Columns["Delete"].DisplayIndex = 9;
-                dataGridView1.Columns["Update"].DisplayIndex = 8;
-                dataGridView1.Columns["Id"].Visible = false;
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -164,130 +144,17 @@ namespace ProjectA_DB
 
         private void Clear_Click(object sender, EventArgs e)
         {
-            FirstName1.Clear();
-            LastANme1.Clear();
-            RegistrationNumber1.Text = "";
-            Contact1.Text = "";
-            Email1.Text = "";
-            Gender1.Text = "";
-            dateTimePicker1.Text = "";
         }
 
         private void Update1_Click(object sender, EventArgs e)
         {
 
-            int lookup_idd = 0;
-
-            try
-            {
-                Student s1 = new Student();
-                s1.setFirstName(FirstName1.Text);
-                s1.setLastName(LastANme1.Text);
-                s1.setContact(Contact1.Text);
-                s1.setEmail(Email1.Text);
-                s1.setDOB(dateTimePicker1.Value);
-                s1.setGender(Gender1.Text);
-                s1.setRegistartionNumber(RegistrationNumber1.Text);
-                bool i = false, j = false, k = false, l = false, m = false, n = false, o = false;
-                if (s1.getFirstName() == null)
-                {
-                    i = true;
-                }
-                if (s1.getLastName() == null)
-                {
-                    j = true;
-                }
-                if (s1.getContact() == null)
-                {
-                    k = true;
-                }
-                if (s1.GetEmail() == null)
-                {
-                    l = true;
-                }
-                if (s1.getGender() == null)
-                {
-                    m = true;
-                }
-                if (s1.GetDOB() == null)
-                {
-                    n = true;
-                }
-                if (s1.getRegistrationNumber() == null)
-                {
-                    o = true;
-                }
-                if (i == true || j == true || k == true || l == true || m == true || n == true || o == true)
-                {
-                    MessageBox.Show("Please Enter Valid Input");
-                }
-                else
-                {
-                    if (FirstName1.Text != " " && LastANme1.Text != " " && Contact1.Text != " " && Email1.Text != " " && dateTimePicker1.Text != " " && RegistrationNumber1.Text != " ")
-                    {
-                        using (SqlConnection con = new SqlConnection(conString))
-                        {
-                            con.Open();
-                            int d = dataGridView1.CurrentCell.RowIndex;
-                            int G = Convert.ToInt32(dataGridView1.Rows[d].Cells["ID"].Value);
-                            string query = "select p.Id From Person as p join Student s on p.Id = s.Id where p.Id = @Id";
-                            SqlCommand b = new SqlCommand(query, con);
-                            b.Parameters.Add(new SqlParameter("@Id", SqlDbType.Int));
-                            b.Parameters["@Id"].Value = G;
-                            int w = (int)b.ExecuteScalar();
-
-
-                            string G2 = "GENDER";
-                            string query2 = string.Format("Select Id from dbo.Lookup WHERE Category = @Category and Value = @Value");
-                            SqlCommand cmd2 = new SqlCommand(query2, con);
-                            cmd2.Parameters.Add(new SqlParameter("@Category", G2));
-                            cmd2.Parameters.Add(new SqlParameter("@Value", this.Gender1.Text));
-                           lookup_idd= (int)cmd2.ExecuteScalar();
-                            string query1 = "UPDATE Person SET FirstName = '" + FirstName1.Text + "',LastName = '" + LastANme1.Text + "',Contact = '" + Contact1.Text + "',Email = '" + Email1.Text + "',DateOfBirth = '" + Convert.ToDateTime(dateTimePicker1.Value) + "',Gender = '" + lookup_idd + "' where Id = "+G;
-                           
-                            SqlCommand cmd = new SqlCommand(query1, con);
-                           
-                            int f = cmd.ExecuteNonQuery();
-                            MessageBox.Show("Record Updated Successfully in Person");
-
-                            string query3 = "UPDATE Student SET Id = '"+G+"',RegistrationNo = '"+RegistrationNumber1.Text+"' where Id = "+G;
-                            
-
-                            SqlCommand cmd3 = new SqlCommand(query3, con);
-                            
-                            int s = cmd3.ExecuteNonQuery();
-                            MessageBox.Show("Record Updated Successfully in Student");
-                            
-                            UpdateData.Hide();
-                           
-                            con.Close();
-
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Please Provide Details!");
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
 
         }
 
         private void cancel_Click(object sender, EventArgs e)
         {
-            FirstName1.Clear();
-            LastANme1.Clear();
-            RegistrationNumber1.Text = "";
-            Contact1.Text = "";
-            Email1.Text = "";
-            Gender1.Text = "";
-            dateTimePicker1.Text = "";
-            UpdateData.Hide();
+           
         }
 
         private void ManageStudent_Load(object sender, EventArgs e)
@@ -363,9 +230,7 @@ namespace ProjectA_DB
 
         private void Back_Click(object sender, EventArgs e)
         {
-            FYPM h = new FYPM();
-            h.Show();
-            this.Close();
+           
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -375,9 +240,174 @@ namespace ProjectA_DB
 
         private void Add_Click(object sender, EventArgs e)
         {
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(conString);
+                con.Open();
+                string query = "Select p.Id, p.FirstName,p.LastName,p.Contact,p.Email,p.DateOfBirth,p.Gender,s.RegistrationNo from Person as p Inner join Student as s on p.Id = s.Id ";
+                SqlCommand b = new SqlCommand(query, con);
+                SqlDataAdapter ad = new SqlDataAdapter(query, con);
+
+                DataTable dt = new DataTable();
+                ad.Fill(dt);
+                dataGridView1.DataSource = dt;
+                dataGridView1.Columns["Delete"].DisplayIndex = 9;
+                dataGridView1.Columns["Update"].DisplayIndex = 8;
+                dataGridView1.Columns["Id"].Visible = false;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
             AddInformation o = new AddInformation();
             o.Show();
             this.Close();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            FYPM h = new FYPM();
+            h.Show();
+            this.Close();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+            FirstName1.Clear();
+            LastANme1.Clear();
+            RegistrationNumber1.Text = "";
+            Contact1.Text = "";
+            Email1.Text = "";
+            Gender1.Text = "";
+            dateTimePicker1.Text = "";
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+            int lookup_idd = 0;
+
+            try
+            {
+                Student s1 = new Student();
+                s1.setFirstName(FirstName1.Text);
+                s1.setLastName(LastANme1.Text);
+                s1.setContact(Contact1.Text);
+                s1.setEmail(Email1.Text);
+                s1.setDOB(dateTimePicker1.Value);
+                s1.setGender(Gender1.Text);
+                s1.setRegistartionNumber(RegistrationNumber1.Text);
+                bool i = false, j = false, k = false, l = false, m = false, n = false, o = false;
+                if (s1.getFirstName() == null)
+                {
+                    i = true;
+                }
+                if (s1.getLastName() == null)
+                {
+                    j = true;
+                }
+                if (s1.getContact() == null)
+                {
+                    k = true;
+                }
+                if (s1.GetEmail() == null)
+                {
+                    l = true;
+                }
+                if (s1.getGender() == null)
+                {
+                    m = true;
+                }
+                if (s1.GetDOB() == null)
+                {
+                    n = true;
+                }
+                if (s1.getRegistrationNumber() == null)
+                {
+                    o = true;
+                }
+                if (i == true || j == true || k == true || l == true || m == true || n == true || o == true)
+                {
+                    MessageBox.Show("Please Enter Valid Input");
+                }
+                else
+                {
+                    if (FirstName1.Text != " " && LastANme1.Text != " " && Contact1.Text != " " && Email1.Text != " " && dateTimePicker1.Text != " " && RegistrationNumber1.Text != " ")
+                    {
+                        using (SqlConnection con = new SqlConnection(conString))
+                        {
+                            con.Open();
+                            int d = dataGridView1.CurrentCell.RowIndex;
+                            int G = Convert.ToInt32(dataGridView1.Rows[d].Cells["ID"].Value);
+                            string query = "select p.Id From Person as p join Student s on p.Id = s.Id where p.Id = @Id";
+                            SqlCommand b = new SqlCommand(query, con);
+                            b.Parameters.Add(new SqlParameter("@Id", SqlDbType.Int));
+                            b.Parameters["@Id"].Value = G;
+                            int w = (int)b.ExecuteScalar();
+
+
+                            string G2 = "GENDER";
+                            string query2 = string.Format("Select Id from dbo.Lookup WHERE Category = @Category and Value = @Value");
+                            SqlCommand cmd2 = new SqlCommand(query2, con);
+                            cmd2.Parameters.Add(new SqlParameter("@Category", G2));
+                            cmd2.Parameters.Add(new SqlParameter("@Value", this.Gender1.Text));
+                            lookup_idd = (int)cmd2.ExecuteScalar();
+                            string query1 = "UPDATE Person SET FirstName = '" + FirstName1.Text + "',LastName = '" + LastANme1.Text + "',Contact = '" + Contact1.Text + "',Email = '" + Email1.Text + "',DateOfBirth = '" + Convert.ToDateTime(dateTimePicker1.Value) + "',Gender = '" + lookup_idd + "' where Id = " + G;
+
+                            SqlCommand cmd = new SqlCommand(query1, con);
+
+                            int f = cmd.ExecuteNonQuery();
+                            MessageBox.Show("Record Updated Successfully in Person");
+
+                            string query3 = "UPDATE Student SET Id = '" + G + "',RegistrationNo = '" + RegistrationNumber1.Text + "' where Id = " + G;
+
+
+                            SqlCommand cmd3 = new SqlCommand(query3, con);
+
+                            int s = cmd3.ExecuteNonQuery();
+                            MessageBox.Show("Record Updated Successfully in Student");
+
+                            UpdateData.Hide();
+
+                            con.Close();
+
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please Provide Details!");
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            FirstName1.Clear();
+            LastANme1.Clear();
+            RegistrationNumber1.Text = "";
+            Contact1.Text = "";
+            Email1.Text = "";
+            Gender1.Text = "";
+            dateTimePicker1.Text = "";
+            UpdateData.Hide();
         }
     }
 }

@@ -44,6 +44,32 @@ namespace ProjectA_DB
         private void clear_Click(object sender, EventArgs e)
         {
 
+           
+        }
+
+        private void Submit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cancel1_Click(object sender, EventArgs e)
+        {
+            
+            /*FirstName1.Clear();
+            LastANme1.Clear();
+            RegistrationNumber1.Text = "";
+            Contact1.Text = "";
+            Email1.Text = "";
+            Gender1.Text = "";
+            dateTimePicker1.Text = "";
+            //this.Hide();
+            ManageStudent o = new ManageStudent();
+            o.Show();
+            this.Hide();*/
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
             FirstName1.Clear();
             LastANme1.Clear();
             RegistrationNumber1.Text = "";
@@ -53,7 +79,7 @@ namespace ProjectA_DB
             dateTimePicker1.Text = "";
         }
 
-        private void Submit_Click(object sender, EventArgs e)
+        private void pictureBox2_Click_1(object sender, EventArgs e)
         {
 
             try
@@ -146,22 +172,11 @@ namespace ProjectA_DB
 
         }
 
-        private void cancel1_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Close();
             ManageStudent s = new ManageStudent();
             s.Show();
-            /*FirstName1.Clear();
-            LastANme1.Clear();
-            RegistrationNumber1.Text = "";
-            Contact1.Text = "";
-            Email1.Text = "";
-            Gender1.Text = "";
-            dateTimePicker1.Text = "";
-            //this.Hide();
-            ManageStudent o = new ManageStudent();
-            o.Show();
-            this.Hide();*/
         }
     }
     

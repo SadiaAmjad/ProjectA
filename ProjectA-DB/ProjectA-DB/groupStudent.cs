@@ -20,6 +20,9 @@ namespace ProjectA_DB
             InitializeComponent();
             dataGridView1.Hide();
             dataGridView2.Hide();
+            panel1.Hide();
+            panel2.Hide();
+            panel3.Hide();
             dataGridView3.Hide();
             comboBox6.Hide();
             label2.Hide();
@@ -81,32 +84,11 @@ namespace ProjectA_DB
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlConnection conn = new SqlConnection(conURL);
-                conn.Open();
-                string query = "INSERT INTO [Group](Created_On) Values('" + DateTime.Today + "')";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                int affectedRowsOfProject = cmd.ExecuteNonQuery();
-                MessageBox.Show(affectedRowsOfProject + "rows inserted in Group!");
-                dataGridView1.Show();
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Text != "")
-            {
-                dataGridView2.Show();
-                comboBox6.Show();
-                label6.Show();
-            }
         }
         private void groupStudent_Load(object sender, EventArgs e)
         {
@@ -180,29 +162,38 @@ namespace ProjectA_DB
             {
                 int d1 = dataGridView1.CurrentCell.RowIndex;
                 bool k1 = dataGridView1.Rows[d1].Cells["AssignProject"].Selected;
-                if (k1 == true)
+                if(dataGridView1.Rows.Count != 0)
                 {
-                    using (SqlConnection con = new SqlConnection(conURL))
+                    if (k1 == true)
                     {
-                        con.Open();
-                        string q = "Select max(Id) from [Group]";
-                        SqlCommand a = new SqlCommand(q, con);
-                        int w = (int)a.ExecuteScalar();
+                        using (SqlConnection con = new SqlConnection(conURL))
+                        {
+                            con.Open();
+                            string q = "Select max(Id) from [Group]";
+                            SqlCommand a = new SqlCommand(q, con);
+                            int w = (int)a.ExecuteScalar();
 
-                        int g = Convert.ToInt32(dataGridView1.Rows[d1].Cells["Id"].Value);
+                            int g = Convert.ToInt32(dataGridView1.Rows[d1].Cells["Id"].Value);
 
-                        string Q2 = String.Format("Insert into GroupProject(ProjectId,GroupId,AssignmentDate)Values('" + g + "','" + w + "','" + DateTime.Today + "') ");
-                        SqlCommand cmd1 = new SqlCommand(Q2, con);
-                        int k = cmd1.ExecuteNonQuery();
-                        MessageBox.Show(k + "rows inserted in group project!");
-                        //dataGridView1.Hide();
-                        this.Close();
-                        groupAdvisor h = new groupAdvisor();
-                        h.Show();
-                        con.Close();
+                            string Q2 = String.Format("Insert into GroupProject(ProjectId,GroupId,AssignmentDate)Values('" + g + "','" + w + "','" + DateTime.Today + "') ");
+                            SqlCommand cmd1 = new SqlCommand(Q2, con);
+                            int k = cmd1.ExecuteNonQuery();
+                            MessageBox.Show(k + "rows inserted in group project!");
+                            //dataGridView1.Hide();
+                            this.Close();
+                            groupAdvisor h = new groupAdvisor();
+                            h.Show();
+                            con.Close();
+                        }
+
                     }
 
                 }
+                else
+                {
+                    MessageBox.Show("No more projects available");
+                }
+                
 
             }
             catch (Exception ex)
@@ -285,9 +276,21 @@ namespace ProjectA_DB
                             {
 
                             }
+                            if(dataGridView2.Rows.Count == 0)
+                            {
+                                MessageBox.Show("No more data to add");
+                                dataGridView2.Hide();
+                                panel1.Hide();
+                                panel2.Show();
+                                comboBox6.Hide();
+                                label6.Hide();
+                                dataGridView3.Show();
+                            }
                             else
                             {
                                 dataGridView2.Hide();
+                                panel1.Hide();
+                                panel2.Show();
                                 comboBox6.Hide();
                                 label6.Hide();
                                 dataGridView3.Show();
@@ -347,9 +350,21 @@ namespace ProjectA_DB
                             {
 
                             }
+                            if (dataGridView3.Rows.Count == 0)
+                            {
+                                MessageBox.Show("No more data to add");
+                                dataGridView3.Hide();
+                                panel2.Hide();
+                                panel3.Show();
+                                dataGridView4.Show();
+                                label2.Show();
+                                textBox1.Show();
+                            }
                             else
                             {
                                 dataGridView3.Hide();
+                                panel2.Hide();
+                                panel3.Show();
                                 dataGridView4.Show();
                                 label2.Show();
                                 textBox1.Show();
@@ -412,9 +427,18 @@ namespace ProjectA_DB
                             {
 
                             }
+                            if(dataGridView4.Rows.Count == 0)
+                            {
+                                MessageBox.Show("No more data to add");
+
+                                panel3.Hide();
+                                dataGridView4.Hide();
+                                label2.Hide();
+                                textBox1.Hide();
+                            }
                             else
                             {
-
+                                panel3.Hide();
                                 dataGridView4.Hide();
                                 label2.Hide();
                                 textBox1.Hide();
@@ -438,9 +462,51 @@ namespace ProjectA_DB
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
             this.Close();
             FYPM k = new FYPM();
             k.Show();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+            if (comboBox1.Text != "")
+            {
+                panel1.Show();
+                dataGridView2.Show();
+                comboBox6.Show();
+                label6.Show();
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection conn = new SqlConnection(conURL);
+                conn.Open();
+                string query = "INSERT INTO [Group](Created_On) Values('" + DateTime.Today + "')";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                int affectedRowsOfProject = cmd.ExecuteNonQuery();
+                MessageBox.Show(affectedRowsOfProject + "rows inserted in Group!");
+                dataGridView1.Show();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
         }
     }
 }

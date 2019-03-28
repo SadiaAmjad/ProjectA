@@ -31,7 +31,6 @@ C:\Users\DR AQSA\Desktop\Project\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA-DB.e
 C:\Users\DR AQSA\Desktop\Project\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA-DB.pdb
 C:\Users\DR AQSA\Desktop\Project\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA_DB.groupStudent.resources
 C:\Users\DR AQSA\Desktop\Project\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA-DB.csprojAssemblyReference.cache
-C:\Users\DR AQSA\Desktop\Project\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA_DB.Group.resources
 C:\Users\DR AQSA\Desktop\Project\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA_DB.groupAdvisor.resources
 C:\Users\DR AQSA\Desktop\Project\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA_DB.groupEvaluation.resources
 C:\Users\DR AQSA\Desktop\Project\ProjectA-DB\ProjectA-DB\obj\Debug\ProjectA_DB.groupS.resources

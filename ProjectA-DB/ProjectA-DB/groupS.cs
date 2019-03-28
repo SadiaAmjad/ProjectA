@@ -52,41 +52,50 @@ namespace ProjectA_DB
             {
                 int d1 = dataGridView1.CurrentCell.RowIndex;
                 bool k1 = dataGridView1.Rows[d1].Cells["AssignStudent"].Selected;
-                if (k1 == true)
+                if(dataGridView1.Rows.Count != 0)
                 {
-                    using (SqlConnection con = new SqlConnection(conURL))
+                    if (k1 == true)
                     {
-                        con.Open();
-                        if (DialogResult.Yes == MessageBox.Show("Are you sure you want to add this Student in group ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                        using (SqlConnection con = new SqlConnection(conURL))
                         {
-
-                            int d3 = dataGridView1.CurrentCell.RowIndex;
-                            string q2 = "Select max(Id) from [Group]";
-                            SqlCommand a2 = new SqlCommand(q2, con);
-                            int w2 = (int)a2.ExecuteScalar();
-
-                            string G2 = "STATUS";
-                            string status2 = "InActive";
-                            string query2 = string.Format("Select Id from dbo.Lookup WHERE Category = @Category and Value = @Value");
-                            SqlCommand cmd4 = new SqlCommand(query2, con);
-                            cmd4.Parameters.Add(new SqlParameter("@Category", G2));
-                            cmd4.Parameters.Add(new SqlParameter("@Value", status2));
-                            int id4 = (int)cmd4.ExecuteScalar();
-
-                            int g2 = Convert.ToInt32(dataGridView1.Rows[d3].Cells["Id"].Value);
-                            string Q = String.Format("Insert into GroupStudent(GroupId ,StudentId,Status,AssignmentDate)Values('" + w2 + "','" + g2 + "','" + id4 + "','" + DateTime.Today + "')");
-                            SqlCommand cmd5 = new SqlCommand(Q, con);
-                            int k3 = cmd5.ExecuteNonQuery();
-                            MessageBox.Show(k3 + "rows inserted in group student!");
-                            dataGridView1.Rows.RemoveAt(d3);
-                            goto label1;
-                            
-                        }
-                    label1:
-                            var choice = MessageBox.Show("Do You Want to add more Students to group ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                            if(choice == DialogResult.Yes)
+                            con.Open();
+                            if (DialogResult.Yes == MessageBox.Show("Are you sure you want to add this Student in group ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
                             {
-                               
+
+                                int d3 = dataGridView1.CurrentCell.RowIndex;
+                                string q2 = "Select max(Id) from [Group]";
+                                SqlCommand a2 = new SqlCommand(q2, con);
+                                int w2 = (int)a2.ExecuteScalar();
+
+                                string G2 = "STATUS";
+                                string status2 = "InActive";
+                                string query2 = string.Format("Select Id from dbo.Lookup WHERE Category = @Category and Value = @Value");
+                                SqlCommand cmd4 = new SqlCommand(query2, con);
+                                cmd4.Parameters.Add(new SqlParameter("@Category", G2));
+                                cmd4.Parameters.Add(new SqlParameter("@Value", status2));
+                                int id4 = (int)cmd4.ExecuteScalar();
+
+                                int g2 = Convert.ToInt32(dataGridView1.Rows[d3].Cells["Id"].Value);
+                                string Q = String.Format("Insert into GroupStudent(GroupId ,StudentId,Status,AssignmentDate)Values('" + w2 + "','" + g2 + "','" + id4 + "','" + DateTime.Today + "')");
+                                SqlCommand cmd5 = new SqlCommand(Q, con);
+                                int k3 = cmd5.ExecuteNonQuery();
+                                MessageBox.Show(k3 + "rows inserted in group student!");
+                                dataGridView1.Rows.RemoveAt(d3);
+                                goto label1;
+
+                            }
+                        label1:
+                            var choice = MessageBox.Show("Do You Want to add more Students to group ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                            if (choice == DialogResult.Yes)
+                            {
+
+                            }
+                            if (dataGridView1.Rows.Count == 0)
+                            {
+                                MessageBox.Show("No more data to add");
+                                this.Close();
+                                groupEvaluation e1 = new groupEvaluation();
+                                e1.Show();
                             }
                             else
                             {
@@ -95,11 +104,18 @@ namespace ProjectA_DB
                                 e1.Show();
                             }
 
-                       
-                     con.Close();
+
+                            con.Close();
+                        }
+
                     }
 
                 }
+                else
+                {
+                    MessageBox.Show("No More students availabe");
+                }
+                
 
             }
             catch (Exception ex)
@@ -109,6 +125,11 @@ namespace ProjectA_DB
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Close();
             groupStudent n = new groupStudent();

@@ -51,58 +51,83 @@ namespace ProjectA_DB
             {
                 int d1 = dataGridView1.CurrentCell.RowIndex;
                 bool k1 = dataGridView1.Rows[d1].Cells["evaluation"].Selected;
-                if (k1 == true)
+                if(dataGridView1.Rows.Count != 0)
                 {
-                    if (textBox1.Text != "")
+                    if (k1 == true)
                     {
-                        try
+                        if (textBox1.Text != "")
                         {
-                            SqlConnection con = new SqlConnection(conURL);
-                            con.Open();
-
-                            int g = Convert.ToInt32(dataGridView1.Rows[d1].Cells["Id"].Value);
-                            string q = "Select max(Id) from [Group]";
-                            SqlCommand a = new SqlCommand(q, con);
-                            int w = (int)a.ExecuteScalar();
-
-                            string Q2 = String.Format("Insert into GroupEvaluation(GroupId,EvaluationId,ObtainedMarks,EvaluationDate)Values('" + w + "','" +g +"','" + Convert.ToInt32(textBox1.Text) + "','" + DateTime.Today + "') ");
-                            SqlCommand cmd1 = new SqlCommand(Q2, con);
-                            int k = cmd1.ExecuteNonQuery();
-                            MessageBox.Show(k + "rows inserted in Group Evaluation!");
-                            dataGridView1.Rows.RemoveAt(d1);
-                            
-                            var choice = MessageBox.Show("Do You Want to add more evaluation to group ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                            if (choice == DialogResult.Yes)
+                            try
                             {
+                                SqlConnection con = new SqlConnection(conURL);
+                                con.Open();
 
+                                int g = Convert.ToInt32(dataGridView1.Rows[d1].Cells["Id"].Value);
+                                string q = "Select max(Id) from [Group]";
+                                SqlCommand a = new SqlCommand(q, con);
+                                int w = (int)a.ExecuteScalar();
+
+                                string Q2 = String.Format("Insert into GroupEvaluation(GroupId,EvaluationId,ObtainedMarks,EvaluationDate)Values('" + w + "','" + g + "','" + Convert.ToInt32(textBox1.Text) + "','" + DateTime.Today + "') ");
+                                SqlCommand cmd1 = new SqlCommand(Q2, con);
+                                int k = cmd1.ExecuteNonQuery();
+                                MessageBox.Show(k + "rows inserted in Group Evaluation!");
+                                dataGridView1.Rows.RemoveAt(d1);
+
+                                var choice = MessageBox.Show("Do You Want to add more evaluation to group ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                                if (choice == DialogResult.Yes)
+                                {
+
+                                }
+                                if (dataGridView1.Rows.Count == 0)
+                                {
+                                    MessageBox.Show("No more data to add");
+                                    this.Close();
+                                    groupStudent s = new groupStudent();
+                                    s.Show();
+                                }
+                                else
+                                {
+                                    this.Close();
+                                    groupStudent s = new groupStudent();
+                                    s.Show();
+                                }
+                                con.Close();
                             }
-                            else
+                            catch (Exception ex)
                             {
-                                this.Close();
-                                groupStudent s = new groupStudent();
-                                s.Show();
+                                MessageBox.Show(ex.Message);
                             }
-                            con.Close();
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            MessageBox.Show(ex.Message);
+                            MessageBox.Show("Please Enter Obtained Marks");
                         }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Please Enter Obtained Marks");
                     }
                 }
+                else
+                {
+                    MessageBox.Show("No data available");
+                }
+                
                    
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
             this.Close();
             groupStudent n = new groupStudent();
             n.Show();
+        }
+
+        private void tableLayoutPanel6_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

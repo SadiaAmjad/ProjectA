@@ -33,11 +33,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.UpdateData = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.Clear = new System.Windows.Forms.Button();
-            this.Update1 = new System.Windows.Forms.Button();
-            this.cancel = new System.Windows.Forms.Button();
             this.FirstName = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.FirstName1 = new System.Windows.Forms.TextBox();
@@ -54,20 +49,30 @@
             this.Email = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.Back = new System.Windows.Forms.Button();
             this.Student = new System.Windows.Forms.Label();
-            this.Add = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.UpdateData.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -118,85 +123,14 @@
             this.UpdateData.Controls.Add(this.DateOfBirth);
             this.UpdateData.Controls.Add(this.Contact);
             this.UpdateData.Controls.Add(this.Email);
-            this.UpdateData.Location = new System.Drawing.Point(38, 210);
+            this.UpdateData.Dock = System.Windows.Forms.DockStyle.Top;
+            this.UpdateData.Location = new System.Drawing.Point(0, 0);
             this.UpdateData.Name = "UpdateData";
             this.UpdateData.Size = new System.Drawing.Size(794, 450);
             this.UpdateData.TabIndex = 7;
             this.UpdateData.TabStop = false;
             this.UpdateData.Text = "Update Student Data";
             this.UpdateData.Enter += new System.EventHandler(this.UpdateData_Enter);
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 2;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 564F));
-            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 1, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 382);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(788, 65);
-            this.tableLayoutPanel4.TabIndex = 50;
-            // 
-            // tableLayoutPanel5
-            // 
-            this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tableLayoutPanel5.Controls.Add(this.Clear, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.Update1, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.cancel, 2, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(227, 3);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(261, 35);
-            this.tableLayoutPanel5.TabIndex = 42;
-            // 
-            // Clear
-            // 
-            this.Clear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Clear.BackgroundImage")));
-            this.Clear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Clear.ForeColor = System.Drawing.Color.Transparent;
-            this.Clear.Location = new System.Drawing.Point(3, 3);
-            this.Clear.Name = "Clear";
-            this.Clear.Size = new System.Drawing.Size(87, 29);
-            this.Clear.TabIndex = 49;
-            this.Clear.Text = "Clear";
-            this.Clear.UseVisualStyleBackColor = true;
-            this.Clear.Click += new System.EventHandler(this.Clear_Click);
-            // 
-            // Update1
-            // 
-            this.Update1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Update1.BackgroundImage")));
-            this.Update1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Update1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Update1.ForeColor = System.Drawing.Color.Transparent;
-            this.Update1.Location = new System.Drawing.Point(96, 3);
-            this.Update1.Name = "Update1";
-            this.Update1.Size = new System.Drawing.Size(77, 29);
-            this.Update1.TabIndex = 47;
-            this.Update1.Text = "Update";
-            this.Update1.UseVisualStyleBackColor = true;
-            this.Update1.Click += new System.EventHandler(this.Update1_Click);
-            // 
-            // cancel
-            // 
-            this.cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cancel.BackgroundImage")));
-            this.cancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel.ForeColor = System.Drawing.Color.Transparent;
-            this.cancel.Location = new System.Drawing.Point(179, 3);
-            this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(79, 29);
-            this.cancel.TabIndex = 48;
-            this.cancel.Text = "Cancel";
-            this.cancel.UseVisualStyleBackColor = true;
-            this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
             // FirstName
             // 
@@ -378,13 +312,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.LightCyan;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Update,
-            this.Delete,
-            this.Column1});
+            this.Delete});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.GridColor = System.Drawing.Color.LightCyan;
             this.dataGridView1.Location = new System.Drawing.Point(0, 164);
@@ -404,34 +338,19 @@
             this.tableLayoutPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
-            this.tableLayoutPanel2.Controls.Add(this.Back, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.Student, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.Add, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.button1, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox2, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox3, 2, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(201, 25);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 73F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(341, 114);
             this.tableLayoutPanel2.TabIndex = 4;
-            // 
-            // Back
-            // 
-            this.Back.BackColor = System.Drawing.Color.LightCyan;
-            this.Back.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Back.ForeColor = System.Drawing.Color.Black;
-            this.Back.Location = new System.Drawing.Point(239, 81);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(99, 30);
-            this.Back.TabIndex = 8;
-            this.Back.Text = "Back";
-            this.Back.UseVisualStyleBackColor = false;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // Student
             // 
@@ -441,42 +360,45 @@
             this.Student.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Student.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Student.ForeColor = System.Drawing.Color.White;
-            this.Student.Location = new System.Drawing.Point(126, 0);
+            this.Student.Location = new System.Drawing.Point(121, 0);
             this.Student.Name = "Student";
-            this.Student.Size = new System.Drawing.Size(107, 78);
+            this.Student.Size = new System.Drawing.Size(112, 41);
             this.Student.TabIndex = 8;
             this.Student.Text = "Student";
             this.Student.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Add
+            // pictureBox1
             // 
-            this.Add.BackColor = System.Drawing.Color.LightCyan;
-            this.Add.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Add.ForeColor = System.Drawing.Color.Black;
-            this.Add.Location = new System.Drawing.Point(3, 81);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(117, 30);
-            this.Add.TabIndex = 8;
-            this.Add.Text = "Add";
-            this.Add.UseVisualStyleBackColor = false;
-            this.Add.Click += new System.EventHandler(this.Add_Click);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(121, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(112, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // button1
+            // pictureBox2
             // 
-            this.button1.BackColor = System.Drawing.Color.LightCyan;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(126, 81);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 30);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Retrieve";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(3, 44);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(107, 67);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(239, 44);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(99, 67);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // Update
             // 
@@ -492,12 +414,71 @@
             this.Delete.Text = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
-            // Column1
+            // tableLayoutPanel6
             // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Image = ((System.Drawing.Image)(resources.GetObject("Column1.Image")));
-            this.Column1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Column1.Name = "Column1";
+            this.tableLayoutPanel6.ColumnCount = 3;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
+            this.tableLayoutPanel6.Controls.Add(this.pictureBox4, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.pictureBox5, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.pictureBox7, 0, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(245, 3);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(259, 77);
+            this.tableLayoutPanel6.TabIndex = 51;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(177, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(79, 71);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 44;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(90, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(81, 71);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 43;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(81, 71);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 42;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 546F));
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 364);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(788, 83);
+            this.tableLayoutPanel4.TabIndex = 50;
             // 
             // ManageStudent
             // 
@@ -513,11 +494,17 @@
             this.panel2.ResumeLayout(false);
             this.UpdateData.ResumeLayout(false);
             this.UpdateData.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -527,9 +514,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox UpdateData;
-        private System.Windows.Forms.Button Clear;
-        private System.Windows.Forms.Button cancel;
-        private System.Windows.Forms.Button Update1;
         private System.Windows.Forms.Label FirstName;
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox FirstName1;
@@ -545,15 +529,17 @@
         private System.Windows.Forms.Label Contact;
         private System.Windows.Forms.Label Email;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button Back;
-        private System.Windows.Forms.Button Add;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label Student;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridViewButtonColumn Update;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.DataGridViewImageColumn Column1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
     }
 }

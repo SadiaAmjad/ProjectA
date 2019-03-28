@@ -153,26 +153,6 @@ namespace ProjectA_DB
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlConnection con = new SqlConnection(conString);
-                con.Open();
-                string query = "Select p.Id, p.FirstName,p.LastName,p.Contact,p.Email,p.DateOfBirth,p.Gender,s.Designation ,s.Salary from Person as p Inner join Advisor as s on p.Id = s.Id ";
-                SqlCommand b = new SqlCommand(query, con);
-                SqlDataAdapter ad = new SqlDataAdapter(query, con);
-
-                DataTable dt = new DataTable();
-                ad.Fill(dt);
-                dataGridView1.DataSource = dt;
-                dataGridView1.Columns["Delete"].DisplayIndex = 10;
-                dataGridView1.Columns["Update"].DisplayIndex = 9;
-                dataGridView1.Columns["Id"].Visible = false;
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
         private void ManageAdvisor_Load(object sender, EventArgs e)
@@ -203,13 +183,69 @@ namespace ProjectA_DB
 
         private void Back_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void Clear_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void cancel_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Update1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            AddAdvisorInformation k = new AddAdvisorInformation();
+            k.Show();
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                SqlConnection con = new SqlConnection(conString);
+                con.Open();
+                string query = "Select p.Id, p.FirstName,p.LastName,p.Contact,p.Email,p.DateOfBirth,p.Gender,s.Designation ,s.Salary from Person as p Inner join Advisor as s on p.Id = s.Id ";
+                SqlCommand b = new SqlCommand(query, con);
+                SqlDataAdapter ad = new SqlDataAdapter(query, con);
+
+                DataTable dt = new DataTable();
+                ad.Fill(dt);
+                dataGridView1.DataSource = dt;
+                dataGridView1.Columns["Delete"].DisplayIndex = 10;
+                dataGridView1.Columns["Update"].DisplayIndex = 9;
+                dataGridView1.Columns["Id"].Visible = false;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
             FYPM o = new FYPM();
             o.Show();
             this.Close();
         }
 
-        private void Clear_Click(object sender, EventArgs e)
+        private void pictureBox6_Click(object sender, EventArgs e)
         {
+
             UFirstName1.Clear();
             ULastANme1.Clear();
             // RegistrationNumber1.Text = "";
@@ -221,22 +257,9 @@ namespace ProjectA_DB
             Usalary1.Text = "";
         }
 
-        private void cancel_Click(object sender, EventArgs e)
+        private void pictureBox5_Click(object sender, EventArgs e)
         {
-            UFirstName1.Clear();
-            ULastANme1.Clear();
-            // RegistrationNumber1.Text = "";
-            UContact1.Text = "";
-            UEmail1.Text = "";
-            UGender1.Text = "";
-            dateTimePicker1.Text = "";
-            UDesignation.Text = "";
-            Usalary1.Text = "";
-            UpdateAdvisorData.Hide();
-        }
 
-        private void Update1_Click(object sender, EventArgs e)
-        {
             int lookup_idd = 0;
 
             try
@@ -343,7 +366,7 @@ namespace ProjectA_DB
                         MessageBox.Show("Please Provide Details!");
                     }
                 }
-               
+
             }
             catch (Exception ex)
             {
@@ -351,11 +374,18 @@ namespace ProjectA_DB
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
-            AddAdvisorInformation k = new AddAdvisorInformation();
-            k.Show();
-            this.Close();
+            UFirstName1.Clear();
+            ULastANme1.Clear();
+            // RegistrationNumber1.Text = "";
+            UContact1.Text = "";
+            UEmail1.Text = "";
+            UGender1.Text = "";
+            dateTimePicker1.Text = "";
+            UDesignation.Text = "";
+            Usalary1.Text = "";
+            UpdateAdvisorData.Hide();
         }
     }
 }

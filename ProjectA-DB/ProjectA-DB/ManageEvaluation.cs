@@ -24,61 +24,16 @@ namespace ProjectA_DB
             /*name1.Clear();
             totalmarks1.Clear();
             totalweightage1.Clear();*/
-            this.Close();
-            FYPM k = new FYPM();
-            k.Show();
+            
         }
 
         private void Submit_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                Evaluation p = new Evaluation();
-                p.SetName(name1.Text);
-                p.setTotalMarks(totalmarks1.Text);
-                p.setTotalWeitage(totalweightage1.Text);
-                bool i = false, j = false, k = false;
-                if (p.GetName() == null)
-                {
-                    i = true;
-                }
-                if (p.getTotalMarks() == null)
-                {
-                    j = true;
-                }
-                if (p.getTotalweightage() == null)
-                {
-                    k = true;
-                }
-                if (i == true || j == true || k == true)
-                {
-                    MessageBox.Show("Please Enter Valid Input");
-                }
-                else
-                {
-                    SqlConnection conn = new SqlConnection(conURL);
-                    MessageBox.Show("ALL DATA SUCESSFULLY ENTERED!");
-                    conn.Open();
-                    string query = "Insert into Evaluation (Name,TotalMarks,TotalWeightage) Values('" + name1.Text + "','" + Convert.ToInt32(totalmarks1.Text) + "','" + Convert.ToInt32(totalweightage1.Text) + "')";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    int affectedRowsOfProject = cmd.ExecuteNonQuery();
-                    MessageBox.Show(affectedRowsOfProject + "rows inserted in Evaluation!");
-                    conn.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
         }
 
         private void Clear_Click_1(object sender, EventArgs e)
         {
-            name1.Clear();
-            totalmarks1.Clear();
-
-            totalweightage1.Clear();
+            
         }
 
         private void Back_Click_1(object sender, EventArgs e)
@@ -91,26 +46,7 @@ namespace ProjectA_DB
 
         private void Retrieve_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlConnection con = new SqlConnection(conURL);
-                con.Open();
-                string q1 = "Select Id,Name,TotalMarks,TotalWeightage from Evaluation ";
-                SqlCommand i = new SqlCommand(q1, con);
-                SqlDataAdapter ad = new SqlDataAdapter(q1, con);
-                DataTable dt = new DataTable();
-                ad.Fill(dt);
-                dataGridView1.DataSource = dt;
-                dataGridView1.Columns["Delete"].DisplayIndex = 5;
-                dataGridView1.Columns["Update"].DisplayIndex = 4;
-                //dataGridView1.Columns["Id"].Visible = false;
-                con.Close();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -183,57 +119,16 @@ namespace ProjectA_DB
 
         private void button3_Click(object sender, EventArgs e)
         {
-            UName.Clear();
-            Utm.Clear();
-
-            Utw.Clear();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-            UName.Clear();
-            Utm.Clear();
-
-            Utw.Clear();
-            UpdateEvaluation.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Evaluation s1 = new Evaluation();
-                s1.SetName(UName.Text);
-                s1.setTotalMarks(Utm.Text);
-                s1.setTotalWeitage(Utw.Text);
-                if (UName.Text != " " && Utm.Text != " " && Utw.Text != " ")
-                {
-                    using (SqlConnection con = new SqlConnection(conURL))
-                    {
-                        con.Open();
-                        int d = dataGridView1.CurrentCell.RowIndex;
-                        int G = Convert.ToInt32(dataGridView1.Rows[d].Cells["Id"].Value);
-                        string query = "select Name,TotalMarks,TotalWeightage from Evaluation where Id = '" + G + "'";
-                        SqlCommand b = new SqlCommand(query, con);
-                        string query1 = "UPDATE Evaluation SET Name = '" + UName.Text + "', TotalMarks = '" + Convert.ToInt32(Utm.Text) + "' ,TotalWeightage='"+Convert.ToInt32(Utw.Text)+"' where Id = '" + G + "'";
-                        SqlCommand cmd = new SqlCommand(query1, con);
-                        int f = cmd.ExecuteNonQuery();
-                        MessageBox.Show("Record Updated Successfully in Evaluation");
-                        con.Close();
-                        UpdateEvaluation.Hide();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Please Provide Details");
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
         private void ManageEvaluation_Load(object sender, EventArgs e)
@@ -260,6 +155,146 @@ namespace ProjectA_DB
                 MessageBox.Show(ex.Message);
             }
 
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            name1.Clear();
+            totalmarks1.Clear();
+
+            totalweightage1.Clear();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Evaluation p = new Evaluation();
+                p.SetName(name1.Text);
+                p.setTotalMarks(totalmarks1.Text);
+                p.setTotalWeitage(totalweightage1.Text);
+                bool i = false, j = false, k = false;
+                if (p.GetName() == null)
+                {
+                    i = true;
+                }
+                if (p.getTotalMarks() == null)
+                {
+                    j = true;
+                }
+                if (p.getTotalweightage() == null)
+                {
+                    k = true;
+                }
+                if (i == true || j == true || k == true)
+                {
+                    MessageBox.Show("Please Enter Valid Input");
+                }
+                else
+                {
+                    SqlConnection conn = new SqlConnection(conURL);
+                    MessageBox.Show("ALL DATA SUCESSFULLY ENTERED!");
+                    conn.Open();
+                    string query = "Insert into Evaluation (Name,TotalMarks,TotalWeightage) Values('" + name1.Text + "','" + Convert.ToInt32(totalmarks1.Text) + "','" + Convert.ToInt32(totalweightage1.Text) + "')";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    int affectedRowsOfProject = cmd.ExecuteNonQuery();
+                    MessageBox.Show(affectedRowsOfProject + "rows inserted in Evaluation!");
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FYPM k = new FYPM();
+            k.Show();
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(conURL);
+                con.Open();
+                string q1 = "Select Id,Name,TotalMarks,TotalWeightage from Evaluation ";
+                SqlCommand i = new SqlCommand(q1, con);
+                SqlDataAdapter ad = new SqlDataAdapter(q1, con);
+                DataTable dt = new DataTable();
+                ad.Fill(dt);
+                dataGridView1.DataSource = dt;
+                dataGridView1.Columns["Delete"].DisplayIndex = 5;
+                dataGridView1.Columns["Update"].DisplayIndex = 4;
+                //dataGridView1.Columns["Id"].Visible = false;
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            UName.Clear();
+            Utm.Clear();
+
+            Utw.Clear();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                Evaluation s1 = new Evaluation();
+                s1.SetName(UName.Text);
+                s1.setTotalMarks(Utm.Text);
+                s1.setTotalWeitage(Utw.Text);
+                if (UName.Text != " " && Utm.Text != " " && Utw.Text != " ")
+                {
+                    using (SqlConnection con = new SqlConnection(conURL))
+                    {
+                        con.Open();
+                        int d = dataGridView1.CurrentCell.RowIndex;
+                        int G = Convert.ToInt32(dataGridView1.Rows[d].Cells["Id"].Value);
+                        string query = "select Name,TotalMarks,TotalWeightage from Evaluation where Id = '" + G + "'";
+                        SqlCommand b = new SqlCommand(query, con);
+                        string query1 = "UPDATE Evaluation SET Name = '" + UName.Text + "', TotalMarks = '" + Convert.ToInt32(Utm.Text) + "' ,TotalWeightage='" + Convert.ToInt32(Utw.Text) + "' where Id = '" + G + "'";
+                        SqlCommand cmd = new SqlCommand(query1, con);
+                        int f = cmd.ExecuteNonQuery();
+                        MessageBox.Show("Record Updated Successfully in Evaluation");
+                        con.Close();
+                        UpdateEvaluation.Hide();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please Provide Details");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+            UName.Clear();
+            Utm.Clear();
+
+            Utw.Clear();
+            UpdateEvaluation.Hide();
         }
     }
 }

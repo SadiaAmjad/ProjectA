@@ -38,41 +38,7 @@ namespace ProjectA_DB
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Project p = new Project();
-                p.setTitle(ProjectTitle1.Text);
-                p.setDescription(textBox1.Text);
-                bool i = false, j = false;
-                if (p.GetTitle() == null)
-                {
-                    i = true;
-                }
-                if (p.GeDescription() == null)
-                {
-                    j = true;
-                }
-                if (i == true || j == true)
-                {
-                    MessageBox.Show("Please Enter Valid Input");
-                }
-                else
-                {
-                    SqlConnection conn = new SqlConnection(conURL);
-                    MessageBox.Show("ALL DATA SUCESSFULLY ENTERED!");
-                    conn.Open();
-                    string query = "Insert into Project (Description,Title) Values('"+textBox1.Text+"','"+ProjectTitle1.Text+"')";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    int affectedRowsOfProject = cmd.ExecuteNonQuery();
-                    MessageBox.Show(affectedRowsOfProject + "rows inserted in Project!");
-                    conn.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-
-            }
+           
         }
 
         /*private void Back_Click(object sender, EventArgs e)
@@ -84,26 +50,7 @@ namespace ProjectA_DB
         */
         private void Retrieve_Click(object sender, EventArgs e)
         {
-            try
-            {
-                SqlConnection con = new SqlConnection(conURL);
-                con.Open();
-                string q1 = "Select Id,Description,Title from Project ";
-                SqlCommand i = new SqlCommand(q1, con);
-                SqlDataAdapter ad = new SqlDataAdapter(q1, con);
-                DataTable dt = new DataTable();
-                ad.Fill(dt);
-                dataGridView1.DataSource = dt;
-                dataGridView1.Columns["Delete"].DisplayIndex = 4;
-                dataGridView1.Columns["Update"].DisplayIndex = 3;
-                dataGridView1.Columns["Id"].Visible = false;
-                con.Close();
-
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+           
         }
 
         private void ManageProject_Load(object sender, EventArgs e)
@@ -200,18 +147,12 @@ namespace ProjectA_DB
 
         private void cancel_Click_1(object sender, EventArgs e)
         {
-            ProjectTitle1.Clear();
-            textBox1.Clear();
-            this.Close();
-            FYPM k = new FYPM();
-            k.Show();
+           
         }
 
         private void Clear_Click_1(object sender, EventArgs e)
         {
-            
-            ProjectTitle1.Clear();
-            textBox1.Clear();
+           
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -240,6 +181,111 @@ namespace ProjectA_DB
         }
 
         private void Update1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void Clear1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+            ProjectTitle1.Clear();
+            textBox1.Clear();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Project p = new Project();
+                p.setTitle(ProjectTitle1.Text);
+                p.setDescription(textBox1.Text);
+                bool i = false, j = false;
+                if (p.GetTitle() == null)
+                {
+                    i = true;
+                }
+                if (p.GeDescription() == null)
+                {
+                    j = true;
+                }
+                if (i == true || j == true)
+                {
+                    MessageBox.Show("Please Enter Valid Input");
+                }
+                else
+                {
+                    SqlConnection conn = new SqlConnection(conURL);
+                    MessageBox.Show("ALL DATA SUCESSFULLY ENTERED!");
+                    conn.Open();
+                    string query = "Insert into Project (Description,Title) Values('" + textBox1.Text + "','" + ProjectTitle1.Text + "')";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    int affectedRowsOfProject = cmd.ExecuteNonQuery();
+                    MessageBox.Show(affectedRowsOfProject + "rows inserted in Project!");
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            ProjectTitle1.Clear();
+            textBox1.Clear();
+            this.Close();
+            FYPM k = new FYPM();
+            k.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(conURL);
+                con.Open();
+                string q1 = "Select Id,Description,Title from Project ";
+                SqlCommand i = new SqlCommand(q1, con);
+                SqlDataAdapter ad = new SqlDataAdapter(q1, con);
+                DataTable dt = new DataTable();
+                ad.Fill(dt);
+                dataGridView1.DataSource = dt;
+                dataGridView1.Columns["Delete"].DisplayIndex = 4;
+                dataGridView1.Columns["Update"].DisplayIndex = 3;
+                dataGridView1.Columns["Id"].Visible = false;
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            PTitle.Clear();
+            PDescription.Clear();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
         {
             try
             {
@@ -275,22 +321,11 @@ namespace ProjectA_DB
             }
         }
 
-        private void Clear1_Click(object sender, EventArgs e)
-        {
-            PTitle.Clear();
-            PDescription.Clear();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void pictureBox5_Click(object sender, EventArgs e)
         {
             PTitle.Clear();
             PDescription.Clear();
             UpdateProject.Hide();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

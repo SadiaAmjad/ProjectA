@@ -67,61 +67,76 @@ namespace ProjectA_DB
                {
                     int d1 = dataGridView1.CurrentCell.RowIndex;
                     bool k1 = dataGridView1.Rows[d1].Cells["AssignAdvisor"].Selected;
-                    if (k1 == true)
+                    if(dataGridView1.Rows.Count != 0)
                     {
-                        if(comboBox6.Text != "")
+                        if (k1 == true)
                         {
-                            using (SqlConnection con = new SqlConnection(conURL))
+                            if (comboBox6.Text != "")
                             {
-                                con.Open();
-                                string q = "Select max(Id) from [Group]";
-                                SqlCommand a = new SqlCommand(q, con);
-                                int w = (int)a.ExecuteScalar();
-
-                                string q1 = "Select max(ProjectId) from GroupProject";
-                                SqlCommand a1 = new SqlCommand(q1, con);
-                                int w1 = (int)a1.ExecuteScalar();
-
-                                string G1 = "ADVISOR_ROLE";
-                                string query1 = string.Format("Select Id from dbo.Lookup WHERE Category = @Category and Value = @Value");
-                                SqlCommand cmd1 = new SqlCommand(query1, con);
-                                cmd1.Parameters.Add(new SqlParameter("@Category", G1));
-                                cmd1.Parameters.Add(new SqlParameter("@Value", this.comboBox6.Text));
-                                int id1 = (int)cmd1.ExecuteScalar();
-
-                                int g = Convert.ToInt32(dataGridView1.Rows[d1].Cells["Id"].Value);
-
-                                string Q2 = String.Format("Insert into ProjectAdvisor(AdvisorId,ProjectId,AdvisorRole,AssignmentDate)Values('" + g + "','" + w1 + "','" + id1 + "','" + DateTime.Today + "') ");
-                                SqlCommand cmd2 = new SqlCommand(Q2, con);
-                                int k = cmd2.ExecuteNonQuery();
-                                MessageBox.Show(k + "rows inserted in Project Advisor!");
-                                dataGridView1.Rows.RemoveAt(d1);
-
-                                var choice = MessageBox.Show("Do You Want to Assign Another Advisor to group ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                                if (choice == DialogResult.Yes)
+                                using (SqlConnection con = new SqlConnection(conURL))
                                 {
+                                    con.Open();
+                                    string q = "Select max(Id) from [Group]";
+                                    SqlCommand a = new SqlCommand(q, con);
+                                    int w = (int)a.ExecuteScalar();
 
+                                    string q1 = "Select max(ProjectId) from GroupProject";
+                                    SqlCommand a1 = new SqlCommand(q1, con);
+                                    int w1 = (int)a1.ExecuteScalar();
+
+                                    string G1 = "ADVISOR_ROLE";
+                                    string query1 = string.Format("Select Id from dbo.Lookup WHERE Category = @Category and Value = @Value");
+                                    SqlCommand cmd1 = new SqlCommand(query1, con);
+                                    cmd1.Parameters.Add(new SqlParameter("@Category", G1));
+                                    cmd1.Parameters.Add(new SqlParameter("@Value", this.comboBox6.Text));
+                                    int id1 = (int)cmd1.ExecuteScalar();
+
+                                    int g = Convert.ToInt32(dataGridView1.Rows[d1].Cells["Id"].Value);
+
+                                    string Q2 = String.Format("Insert into ProjectAdvisor(AdvisorId,ProjectId,AdvisorRole,AssignmentDate)Values('" + g + "','" + w1 + "','" + id1 + "','" + DateTime.Today + "') ");
+                                    SqlCommand cmd2 = new SqlCommand(Q2, con);
+                                    int k = cmd2.ExecuteNonQuery();
+                                    MessageBox.Show(k + "rows inserted in Project Advisor!");
+                                    dataGridView1.Rows.RemoveAt(d1);
+
+                                    var choice = MessageBox.Show("Do You Want to Assign Another Advisor to group ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                                    if (choice == DialogResult.Yes)
+                                    {
+
+                                    }
+                                    if (dataGridView1.Rows.Count == 0)
+                                    {
+                                        MessageBox.Show("No more data to add");
+                                        this.Close();
+                                        groupS s = new groupS();
+                                        s.Show();
+                                    }
+                                    else
+                                    {
+                                        this.Close();
+                                        groupS s = new groupS();
+                                        s.Show();
+                                    }
+
+                                    con.Close();
                                 }
-                                else
-                                {
-                                    this.Close();
-                                    groupS s = new groupS();
-                                    s.Show();
-                                }
-                                
-                                con.Close();
+
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Please select Advisor Role !");
                             }
 
-                        
-                        }
-                        else
-                        {
-                            MessageBox.Show("Please select Advisor Role !");
                         }
 
                     }
-                    
-               }
+                    else
+                    {
+                        MessageBox.Show("No data to assign");
+                    }
+
+                }
                 else
                 {
                     MessageBox.Show("Please select Advisor Role !");
@@ -150,6 +165,11 @@ namespace ProjectA_DB
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Close();
             groupStudent g = new groupStudent();

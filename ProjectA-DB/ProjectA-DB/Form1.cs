@@ -16,10 +16,11 @@ namespace ProjectA_DB
         public FYPM()
         {
             InitializeComponent();
-            //this.Hide();
-           
+            
+
         }
-       
+        
+
         private void creat_Click(object sender, EventArgs e)
         {
             
@@ -84,11 +85,6 @@ namespace ProjectA_DB
             
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void tabPage5_Click(object sender, EventArgs e)
         {
 
@@ -104,9 +100,7 @@ namespace ProjectA_DB
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ManageStudent o = new ManageStudent();
-            o.Show();
-            this.Hide();
+            
         }
 
         private void button2_Click_2(object sender, EventArgs e)
@@ -126,8 +120,7 @@ namespace ProjectA_DB
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            Group k = new Group();
-            k.Show();
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -135,6 +128,18 @@ namespace ProjectA_DB
             this.Hide();
             groupStudent s = new groupStudent();
             s.Show();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click_2(object sender, EventArgs e)
+        {
+            ManageStudent o = new ManageStudent();
+            o.Show();
+            this.Hide();
         }
     }
 }

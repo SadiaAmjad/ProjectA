@@ -21,15 +21,7 @@ namespace ProjectA_DB
 
         private void clear_Click(object sender, EventArgs e)
         {
-            FirstName1.Clear();
-            LastANme1.Clear();
-           // RegistrationNumber1.Text = "";
-            Contact1.Text = "";
-            Email1.Text = "";
-            Gender1.Text = "";
-            dateTimePicker1.Text = "";
-            Desgnation1.Text = "";
-            salary1.Text = "";
+            
 
         }
 
@@ -43,6 +35,41 @@ namespace ProjectA_DB
         }
 
         private void Submit1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cancel1_Click(object sender, EventArgs e)
+        {
+           
+            /*FirstName1.Clear();
+            LastANme1.Clear();
+            // RegistrationNumber1.Text = "";
+            Contact1.Text = "";
+            Email1.Text = "";
+            Gender1.Text = "";
+            dateTimePicker1.Text = "";
+            Desgnation1.Text = "";
+            salary1.Text = "";
+            ManageAdvisor p = new ManageAdvisor();
+            p.Show();
+            this.Hide();*/
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            FirstName1.Clear();
+            LastANme1.Clear();
+            // RegistrationNumber1.Text = "";
+            Contact1.Text = "";
+            Email1.Text = "";
+            Gender1.Text = "";
+            dateTimePicker1.Text = "";
+            Desgnation1.Text = "";
+            salary1.Text = "";
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
         {
 
             try
@@ -154,23 +181,11 @@ namespace ProjectA_DB
             }
         }
 
-        private void cancel1_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
             ManageAdvisor k = new ManageAdvisor();
             k.Show();
             this.Close();
-            /*FirstName1.Clear();
-            LastANme1.Clear();
-            // RegistrationNumber1.Text = "";
-            Contact1.Text = "";
-            Email1.Text = "";
-            Gender1.Text = "";
-            dateTimePicker1.Text = "";
-            Desgnation1.Text = "";
-            salary1.Text = "";
-            ManageAdvisor p = new ManageAdvisor();
-            p.Show();
-            this.Hide();*/
         }
     }
 }
