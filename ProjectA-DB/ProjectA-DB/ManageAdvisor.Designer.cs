@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageAdvisor));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel2 = new System.Windows.Forms.Panel();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageAdvisor));
             this.UpdateAdvisorData = new System.Windows.Forms.GroupBox();
             this.UDesignation = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,47 +51,27 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.circularButton6 = new RoundButtonDemo.CircularButton();
+            this.circularButton5 = new RoundButtonDemo.CircularButton();
+            this.circularButton4 = new RoundButtonDemo.CircularButton();
+            this.circularButton3 = new RoundButtonDemo.CircularButton();
+            this.circularButton1 = new RoundButtonDemo.CircularButton();
+            this.circularButton2 = new RoundButtonDemo.CircularButton();
             this.UpdateAdvisorData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.tableLayoutPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.Controls.Add(this.UpdateAdvisorData);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Controls.Add(this.tableLayoutPanel2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 450);
-            this.panel2.TabIndex = 8;
             // 
             // UpdateAdvisorData
             // 
-            this.UpdateAdvisorData.BackColor = System.Drawing.Color.LightCyan;
-            this.UpdateAdvisorData.Controls.Add(this.tableLayoutPanel1);
+            this.UpdateAdvisorData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(106)))), ((int)(((byte)(93)))));
+            this.UpdateAdvisorData.Controls.Add(this.circularButton6);
+            this.UpdateAdvisorData.Controls.Add(this.circularButton5);
+            this.UpdateAdvisorData.Controls.Add(this.circularButton4);
             this.UpdateAdvisorData.Controls.Add(this.UDesignation);
             this.UpdateAdvisorData.Controls.Add(this.label3);
             this.UpdateAdvisorData.Controls.Add(this.Usalary1);
@@ -108,10 +88,11 @@
             this.UpdateAdvisorData.Controls.Add(this.DateOfBirth);
             this.UpdateAdvisorData.Controls.Add(this.Contact);
             this.UpdateAdvisorData.Controls.Add(this.Email);
-            this.UpdateAdvisorData.Dock = System.Windows.Forms.DockStyle.Top;
+            this.UpdateAdvisorData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UpdateAdvisorData.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.UpdateAdvisorData.Location = new System.Drawing.Point(0, 0);
             this.UpdateAdvisorData.Name = "UpdateAdvisorData";
-            this.UpdateAdvisorData.Size = new System.Drawing.Size(800, 450);
+            this.UpdateAdvisorData.Size = new System.Drawing.Size(868, 449);
             this.UpdateAdvisorData.TabIndex = 7;
             this.UpdateAdvisorData.TabStop = false;
             this.UpdateAdvisorData.Text = "Update Advisor Data";
@@ -121,7 +102,8 @@
             this.UDesignation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.UDesignation.BackColor = System.Drawing.Color.LightCyan;
+            this.UDesignation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(106)))), ((int)(((byte)(93)))));
+            this.UDesignation.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.UDesignation.FormattingEnabled = true;
             this.UDesignation.Items.AddRange(new object[] {
             "Professor",
@@ -131,7 +113,7 @@
             "Industry Professional"});
             this.UDesignation.Location = new System.Drawing.Point(233, 305);
             this.UDesignation.Name = "UDesignation";
-            this.UDesignation.Size = new System.Drawing.Size(357, 21);
+            this.UDesignation.Size = new System.Drawing.Size(452, 21);
             this.UDesignation.TabIndex = 53;
             // 
             // label3
@@ -152,10 +134,11 @@
             this.Usalary1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Usalary1.BackColor = System.Drawing.Color.LightCyan;
+            this.Usalary1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(106)))), ((int)(((byte)(93)))));
+            this.Usalary1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.Usalary1.Location = new System.Drawing.Point(234, 351);
             this.Usalary1.Name = "Usalary1";
-            this.Usalary1.Size = new System.Drawing.Size(357, 20);
+            this.Usalary1.Size = new System.Drawing.Size(452, 20);
             this.Usalary1.TabIndex = 50;
             // 
             // label1
@@ -197,7 +180,7 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(233, 215);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(354, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(452, 20);
             this.dateTimePicker1.TabIndex = 46;
             this.dateTimePicker1.Value = new System.DateTime(2019, 3, 8, 18, 4, 49, 0);
             // 
@@ -206,10 +189,11 @@
             this.UFirstName1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.UFirstName1.BackColor = System.Drawing.Color.LightCyan;
+            this.UFirstName1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(106)))), ((int)(((byte)(93)))));
+            this.UFirstName1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.UFirstName1.Location = new System.Drawing.Point(233, 36);
             this.UFirstName1.Name = "UFirstName1";
-            this.UFirstName1.Size = new System.Drawing.Size(357, 20);
+            this.UFirstName1.Size = new System.Drawing.Size(452, 20);
             this.UFirstName1.TabIndex = 33;
             // 
             // UGender1
@@ -217,14 +201,15 @@
             this.UGender1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.UGender1.BackColor = System.Drawing.Color.LightCyan;
+            this.UGender1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(106)))), ((int)(((byte)(93)))));
+            this.UGender1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.UGender1.FormattingEnabled = true;
             this.UGender1.Items.AddRange(new object[] {
             "Female",
             "Male"});
             this.UGender1.Location = new System.Drawing.Point(233, 258);
             this.UGender1.Name = "UGender1";
-            this.UGender1.Size = new System.Drawing.Size(357, 21);
+            this.UGender1.Size = new System.Drawing.Size(452, 21);
             this.UGender1.TabIndex = 45;
             // 
             // ULastANme1
@@ -232,10 +217,11 @@
             this.ULastANme1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ULastANme1.BackColor = System.Drawing.Color.LightCyan;
+            this.ULastANme1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(106)))), ((int)(((byte)(93)))));
+            this.ULastANme1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.ULastANme1.Location = new System.Drawing.Point(233, 80);
             this.ULastANme1.Name = "ULastANme1";
-            this.ULastANme1.Size = new System.Drawing.Size(357, 20);
+            this.ULastANme1.Size = new System.Drawing.Size(452, 20);
             this.ULastANme1.TabIndex = 34;
             // 
             // UContact1
@@ -243,10 +229,11 @@
             this.UContact1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.UContact1.BackColor = System.Drawing.Color.LightCyan;
+            this.UContact1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(106)))), ((int)(((byte)(93)))));
+            this.UContact1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.UContact1.Location = new System.Drawing.Point(233, 126);
             this.UContact1.Name = "UContact1";
-            this.UContact1.Size = new System.Drawing.Size(357, 20);
+            this.UContact1.Size = new System.Drawing.Size(452, 20);
             this.UContact1.TabIndex = 35;
             // 
             // UEmail1
@@ -254,10 +241,11 @@
             this.UEmail1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.UEmail1.BackColor = System.Drawing.Color.LightCyan;
+            this.UEmail1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(106)))), ((int)(((byte)(93)))));
+            this.UEmail1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.UEmail1.Location = new System.Drawing.Point(233, 168);
             this.UEmail1.Name = "UEmail1";
-            this.UEmail1.Size = new System.Drawing.Size(354, 20);
+            this.UEmail1.Size = new System.Drawing.Size(452, 20);
             this.UEmail1.TabIndex = 36;
             // 
             // Gender
@@ -329,23 +317,25 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightCyan;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(96)))), ((int)(((byte)(42)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Update,
             this.Delete});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(96)))), ((int)(((byte)(42)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 192);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 258);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.Size = new System.Drawing.Size(868, 146);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -363,170 +353,155 @@
             this.Delete.Text = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
-            // tableLayoutPanel2
+            // panel1
             // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
-            this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.pictureBox2, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.pictureBox3, 2, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(221, 31);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 76F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(344, 130);
-            this.tableLayoutPanel2.TabIndex = 4;
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 449);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(868, 146);
+            this.panel1.TabIndex = 8;
             // 
-            // label2
+            // panel2
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(123, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 54);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Advisor";
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.UpdateAdvisorData);
+            this.panel2.Controls.Add(this.circularButton3);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.circularButton1);
+            this.panel2.Controls.Add(this.circularButton2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(868, 449);
+            this.panel2.TabIndex = 10;
             // 
-            // pictureBox1
+            // label10
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(123, 57);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 70);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Blacker Text", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label10.Image = ((System.Drawing.Image)(resources.GetObject("label10.Image")));
+            this.label10.Location = new System.Drawing.Point(355, 153);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(138, 31);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "ADVISOR";
             // 
-            // pictureBox2
+            // circularButton6
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(3, 57);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(114, 70);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.circularButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(96)))), ((int)(((byte)(42)))));
+            this.circularButton6.FlatAppearance.BorderSize = 0;
+            this.circularButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularButton6.Font = new System.Drawing.Font("Blacker Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularButton6.ForeColor = System.Drawing.Color.White;
+            this.circularButton6.Location = new System.Drawing.Point(491, 378);
+            this.circularButton6.Name = "circularButton6";
+            this.circularButton6.Size = new System.Drawing.Size(64, 56);
+            this.circularButton6.TabIndex = 56;
+            this.circularButton6.Text = "Cancel";
+            this.circularButton6.UseVisualStyleBackColor = false;
+            this.circularButton6.Click += new System.EventHandler(this.circularButton6_Click);
             // 
-            // pictureBox3
+            // circularButton5
             // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(241, 57);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 70);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.circularButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
+            this.circularButton5.FlatAppearance.BorderSize = 0;
+            this.circularButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularButton5.Font = new System.Drawing.Font("Blacker Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularButton5.ForeColor = System.Drawing.Color.White;
+            this.circularButton5.Location = new System.Drawing.Point(417, 377);
+            this.circularButton5.Name = "circularButton5";
+            this.circularButton5.Size = new System.Drawing.Size(64, 56);
+            this.circularButton5.TabIndex = 55;
+            this.circularButton5.Text = "Update";
+            this.circularButton5.UseVisualStyleBackColor = false;
+            this.circularButton5.Click += new System.EventHandler(this.circularButton5_Click);
             // 
-            // tableLayoutPanel7
+            // circularButton4
             // 
-            this.tableLayoutPanel7.ColumnCount = 3;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85F));
-            this.tableLayoutPanel7.Controls.Add(this.pictureBox4, 2, 0);
-            this.tableLayoutPanel7.Controls.Add(this.pictureBox5, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.pictureBox6, 0, 0);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(273, 3);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 1;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(259, 70);
-            this.tableLayoutPanel7.TabIndex = 51;
+            this.circularButton4.BackColor = System.Drawing.Color.Crimson;
+            this.circularButton4.FlatAppearance.BorderSize = 0;
+            this.circularButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularButton4.Font = new System.Drawing.Font("Blacker Text", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularButton4.ForeColor = System.Drawing.Color.White;
+            this.circularButton4.Location = new System.Drawing.Point(341, 377);
+            this.circularButton4.Name = "circularButton4";
+            this.circularButton4.Size = new System.Drawing.Size(64, 56);
+            this.circularButton4.TabIndex = 54;
+            this.circularButton4.Text = "Clear";
+            this.circularButton4.UseVisualStyleBackColor = false;
+            this.circularButton4.Click += new System.EventHandler(this.circularButton4_Click);
             // 
-            // pictureBox4
+            // circularButton3
             // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(177, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(79, 64);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 44;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.circularButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(85)))), ((int)(((byte)(106)))));
+            this.circularButton3.FlatAppearance.BorderSize = 0;
+            this.circularButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularButton3.Font = new System.Drawing.Font("Blacker Text", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularButton3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.circularButton3.Location = new System.Drawing.Point(468, 219);
+            this.circularButton3.Name = "circularButton3";
+            this.circularButton3.Size = new System.Drawing.Size(78, 69);
+            this.circularButton3.TabIndex = 15;
+            this.circularButton3.Text = "BACK";
+            this.circularButton3.UseVisualStyleBackColor = false;
+            this.circularButton3.Click += new System.EventHandler(this.circularButton3_Click);
             // 
-            // pictureBox5
+            // circularButton1
             // 
-            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(90, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(81, 64);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 43;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.circularButton1.BackColor = System.Drawing.Color.Crimson;
+            this.circularButton1.FlatAppearance.BorderSize = 0;
+            this.circularButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularButton1.Font = new System.Drawing.Font("Blacker Text", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularButton1.ForeColor = System.Drawing.Color.White;
+            this.circularButton1.Location = new System.Drawing.Point(303, 219);
+            this.circularButton1.Name = "circularButton1";
+            this.circularButton1.Size = new System.Drawing.Size(81, 68);
+            this.circularButton1.TabIndex = 13;
+            this.circularButton1.Text = "ADD";
+            this.circularButton1.UseVisualStyleBackColor = false;
+            this.circularButton1.Click += new System.EventHandler(this.circularButton1_Click);
             // 
-            // pictureBox6
+            // circularButton2
             // 
-            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(81, 64);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 42;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 524F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 371);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(794, 76);
-            this.tableLayoutPanel1.TabIndex = 71;
+            this.circularButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
+            this.circularButton2.FlatAppearance.BorderSize = 0;
+            this.circularButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularButton2.Font = new System.Drawing.Font("Blacker Text", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularButton2.ForeColor = System.Drawing.Color.White;
+            this.circularButton2.Location = new System.Drawing.Point(388, 219);
+            this.circularButton2.Name = "circularButton2";
+            this.circularButton2.Size = new System.Drawing.Size(74, 69);
+            this.circularButton2.TabIndex = 14;
+            this.circularButton2.Text = "REFRESH";
+            this.circularButton2.UseVisualStyleBackColor = false;
+            this.circularButton2.Click += new System.EventHandler(this.circularButton2_Click);
             // 
             // ManageAdvisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(868, 595);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ManageAdvisor";
             this.Text = "Manage Advisor";
             this.Load += new System.EventHandler(this.ManageAdvisor_Load);
-            this.panel2.ResumeLayout(false);
             this.UpdateAdvisorData.ResumeLayout(false);
             this.UpdateAdvisorData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.tableLayoutPanel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox UpdateAdvisorData;
         private System.Windows.Forms.Label FirstName;
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -543,19 +518,18 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewButtonColumn Update;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox UDesignation;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Usalary1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private RoundButtonDemo.CircularButton circularButton3;
+        private System.Windows.Forms.Label label10;
+        private RoundButtonDemo.CircularButton circularButton1;
+        private RoundButtonDemo.CircularButton circularButton2;
+        private RoundButtonDemo.CircularButton circularButton6;
+        private RoundButtonDemo.CircularButton circularButton5;
+        private RoundButtonDemo.CircularButton circularButton4;
     }
 }

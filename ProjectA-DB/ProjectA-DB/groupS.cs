@@ -36,6 +36,10 @@ namespace ProjectA_DB
                         dataGridView1.DataSource = dt;
                         dataGridView1.Columns["AssignStudent"].DisplayIndex = 4;
                         dataGridView1.Columns["Id"].Visible = false;
+                        DataGridViewButtonColumn c1 = (DataGridViewButtonColumn)dataGridView1.Columns["AssignStudent"];
+                        c1.FlatStyle = FlatStyle.Popup;
+                        c1.DefaultCellStyle.ForeColor = Color.WhiteSmoke;
+                        c1.DefaultCellStyle.BackColor = Color.Crimson;
                     }
                     connection.Close();
                 } 
@@ -124,12 +128,12 @@ namespace ProjectA_DB
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
-            
+           
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void circularButton5_Click(object sender, EventArgs e)
         {
             this.Close();
             groupStudent n = new groupStudent();

@@ -173,6 +173,17 @@ namespace ProjectA_DB
                 dataGridView1.Columns["Delete"].DisplayIndex = 10;
                 dataGridView1.Columns["Update"].DisplayIndex = 9;
                 dataGridView1.Columns["Id"].Visible = false;
+
+                DataGridViewButtonColumn c = (DataGridViewButtonColumn)dataGridView1.Columns["Delete"];
+                c.FlatStyle = FlatStyle.Popup;
+                c.DefaultCellStyle.ForeColor = Color.WhiteSmoke;
+                c.DefaultCellStyle.BackColor = Color.Crimson;
+
+                DataGridViewButtonColumn c1 = (DataGridViewButtonColumn)dataGridView1.Columns["Update"];
+                c1.FlatStyle = FlatStyle.Popup;
+                c1.DefaultCellStyle.ForeColor = Color.WhiteSmoke;
+                c1.DefaultCellStyle.BackColor = Color.Crimson;
+
                 con.Close();
             }
             catch (Exception ex)
@@ -206,14 +217,44 @@ namespace ProjectA_DB
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            AddAdvisorInformation k = new AddAdvisorInformation();
-            k.Show();
-            this.Close();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+            
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+           
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void circularButton1_Click(object sender, EventArgs e)
+        {
+            AddAdvisorInformation k = new AddAdvisorInformation();
+            k.Show();
+            this.Close();
+        }
+
+        private void circularButton2_Click(object sender, EventArgs e)
+        {
             try
             {
                 SqlConnection con = new SqlConnection(conString);
@@ -236,16 +277,16 @@ namespace ProjectA_DB
             }
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void circularButton3_Click(object sender, EventArgs e)
         {
+
             FYPM o = new FYPM();
             o.Show();
             this.Close();
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
+        private void circularButton4_Click(object sender, EventArgs e)
         {
-
             UFirstName1.Clear();
             ULastANme1.Clear();
             // RegistrationNumber1.Text = "";
@@ -257,7 +298,7 @@ namespace ProjectA_DB
             Usalary1.Text = "";
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void circularButton5_Click(object sender, EventArgs e)
         {
 
             int lookup_idd = 0;
@@ -374,7 +415,7 @@ namespace ProjectA_DB
             }
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void circularButton6_Click(object sender, EventArgs e)
         {
             UFirstName1.Clear();
             ULastANme1.Clear();

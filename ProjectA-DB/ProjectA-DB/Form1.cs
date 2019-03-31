@@ -19,126 +19,92 @@ namespace ProjectA_DB
             
 
         }
+        private int imageNumber = 1;
+        private void loadNextImage()
+        {
+            if (imageNumber == 8)
+            {
+                imageNumber = 0;
+            }
+            slidePic.ImageLocation = string.Format(@"images\{0}.jpg", imageNumber);
+            imageNumber++;
+        }
         
 
-        private void creat_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void FYPM_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        
-        int selectedid = 0;
-        private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            selectedid = e.RowIndex;
-        }
-
-        
-
-        private void Clear_Click(object sender, EventArgs e)
-        {
-          
-            //this.Hide();
-        }
-
-        private void cancel_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void Update1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void UpdateData_Enter(object sender, EventArgs e)
-        {
-           
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void button5_Click_2(object sender, EventArgs e)
         {
             ManageStudent o = new ManageStudent();
             o.Show();
             this.Hide();
         }
-        private void button3_Click(object sender, EventArgs e)
+
+        private void FYPM_Load(object sender, EventArgs e)
         {
+
+            //this.reportViewer1.RefreshReport();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
+            loadNextImage();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            ManageStudent o = new ManageStudent();
+            o.Show();
+            this.Hide();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
-            
-        }
-
-        private void tabPage5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-
             ManageAdvisor p = new ManageAdvisor();
             p.Show();
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button2_Click_2(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             ManageProject q1 = new ManageProject();
             q1.Show();
             this.Hide();
         }
 
-        private void button3_Click_1(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-
             ManageEvaluation o = new ManageEvaluation();
             o.Show();
             this.Hide();
         }
 
-        private void button5_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button6_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
             this.Hide();
             groupStudent s = new groupStudent();
             s.Show();
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
-
+           
         }
 
-        private void button5_Click_2(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
-            ManageStudent o = new ManageStudent();
-            o.Show();
+           
+        }
+
+        private void circularButton4_Click(object sender, EventArgs e)
+        {
+            Report k = new Report();
+            k.Show();
+            this.Hide();
+        }
+
+        private void circularButton1_Click(object sender, EventArgs e)
+        {
+            Report2 k = new Report2();
+            k.Show();
             this.Hide();
         }
     }

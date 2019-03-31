@@ -70,6 +70,21 @@ namespace ProjectA_DB
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void circularButton4_Click(object sender, EventArgs e)
+        {
             FirstName1.Clear();
             LastANme1.Clear();
             RegistrationNumber1.Text = "";
@@ -79,7 +94,7 @@ namespace ProjectA_DB
             dateTimePicker1.Text = "";
         }
 
-        private void pictureBox2_Click_1(object sender, EventArgs e)
+        private void circularButton5_Click(object sender, EventArgs e)
         {
 
             try
@@ -172,7 +187,7 @@ namespace ProjectA_DB
 
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void circularButton6_Click(object sender, EventArgs e)
         {
             this.Close();
             ManageStudent s = new ManageStudent();

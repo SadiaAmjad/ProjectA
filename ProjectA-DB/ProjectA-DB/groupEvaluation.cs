@@ -31,6 +31,10 @@ namespace ProjectA_DB
             dataGridView1.DataSource = dt;
             dataGridView1.Columns["evaluation"].DisplayIndex = 3;
             dataGridView1.Columns["Id"].Visible = false;
+            DataGridViewButtonColumn c = (DataGridViewButtonColumn)dataGridView1.Columns["evaluation"];
+            c.FlatStyle = FlatStyle.Popup;
+            c.DefaultCellStyle.ForeColor = Color.WhiteSmoke;
+            c.DefaultCellStyle.BackColor = Color.Crimson;
             con.Close();
         }
 
@@ -120,14 +124,19 @@ namespace ProjectA_DB
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            this.Close();
-            groupStudent n = new groupStudent();
-            n.Show();
+            
         }
 
         private void tableLayoutPanel6_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void circularButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            groupStudent n = new groupStudent();
+            n.Show();
         }
     }
 }

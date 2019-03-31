@@ -19,6 +19,7 @@ namespace ProjectA_DB
         {
             InitializeComponent();
             dataGridView1.Hide();
+            panel5.Hide();
             dataGridView2.Hide();
             panel1.Hide();
             panel2.Hide();
@@ -97,7 +98,7 @@ namespace ProjectA_DB
             {
                 using (SqlConnection con = new SqlConnection(conURL))
                 {
-
+                    con.Open();
                     string query4 = "select Id ,Title,Description from Project except select ProjectId ,Title,Description from GroupProject join Project on Id = ProjectId";
                     SqlCommand b = new SqlCommand(query4, con);
                     SqlDataAdapter ad = new SqlDataAdapter(query4, con);
@@ -106,8 +107,11 @@ namespace ProjectA_DB
                     dataGridView1.DataSource = dt;
                     dataGridView1.Columns["AssignProject"].DisplayIndex = 3;
                     dataGridView1.Columns["Id"].Visible = false;
-                    con.Close();
-
+                    DataGridViewButtonColumn c8 = (DataGridViewButtonColumn)dataGridView1.Columns["AssignProject"];
+                    c8.FlatStyle = FlatStyle.Popup;
+                    c8.DefaultCellStyle.ForeColor = Color.WhiteSmoke;
+                    c8.DefaultCellStyle.BackColor = Color.Crimson;
+                    
 
                     string query5 = "Select p.Id ,p.FirstName,p.LastName, Designation from Advisor as a join Person as p on a.Id = p.Id except select AdvisorId,FirstName,LastName,Designation from ProjectAdvisor join Person as p on p.Id = AdvisorId join Advisor as d on d.Id = p.Id;";
                     SqlCommand b1 = new SqlCommand(query5, con);
@@ -117,6 +121,10 @@ namespace ProjectA_DB
                     dataGridView2.DataSource = dt1;
                     dataGridView2.Columns["advisor"].DisplayIndex = 4;
                     dataGridView2.Columns["Id"].Visible = false;
+                    DataGridViewButtonColumn c1 = (DataGridViewButtonColumn)dataGridView2.Columns["advisor"];
+                    c1.FlatStyle = FlatStyle.Popup;
+                    c1.DefaultCellStyle.ForeColor = Color.WhiteSmoke;
+                    c1.DefaultCellStyle.BackColor = Color.Crimson;
 
 
                     string query = "select p.Id , p.FirstName,p.LastName,s.RegistrationNo from Student as s join Person as p on p.Id = s.Id except select StudentId , FirstName,LastName,RegistrationNo from GroupStudent  join Student on Id = StudentId join Person as p on StudentId = p.Id; ";
@@ -128,6 +136,10 @@ namespace ProjectA_DB
                         dataGridView3.DataSource = dt2;
                         dataGridView3.Columns["AssignStudent"].DisplayIndex = 4;
                         dataGridView3.Columns["Id"].Visible = false;
+                        DataGridViewButtonColumn c2 = (DataGridViewButtonColumn)dataGridView3.Columns["AssignStudent"];
+                        c2.FlatStyle = FlatStyle.Popup;
+                        c2.DefaultCellStyle.ForeColor = Color.WhiteSmoke;
+                        c2.DefaultCellStyle.BackColor = Color.Crimson;
                     }
 
                     string query2 = "select Id ,Name,TotalMarks from Evaluation except select EvaluationId ,Name,TotalMarks from Evaluation join GroupEvaluation on EvaluationId = Id ";
@@ -139,6 +151,11 @@ namespace ProjectA_DB
                     dataGridView4.DataSource = dt7;
                     dataGridView4.Columns["evaluation"].DisplayIndex = 3;
                     dataGridView4.Columns["Id"].Visible = false;
+
+                    DataGridViewButtonColumn c3 = (DataGridViewButtonColumn)dataGridView4.Columns["evaluation"];
+                    c3.FlatStyle = FlatStyle.Popup;
+                    c3.DefaultCellStyle.ForeColor = Color.WhiteSmoke;
+                    c3.DefaultCellStyle.BackColor = Color.Crimson;
                     con.Close();
 
                 } //connection closed and disposed here
@@ -467,12 +484,47 @@ namespace ProjectA_DB
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void circularButton4_Click(object sender, EventArgs e)
+        {
             this.Close();
             FYPM k = new FYPM();
             k.Show();
         }
 
-        private void pictureBox7_Click(object sender, EventArgs e)
+        private void circularButton5_Click(object sender, EventArgs e)
         {
 
             if (comboBox1.Text != "")
@@ -484,12 +536,7 @@ namespace ProjectA_DB
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
+        private void circularButton6_Click(object sender, EventArgs e)
         {
             try
             {
@@ -499,6 +546,7 @@ namespace ProjectA_DB
                 SqlCommand cmd = new SqlCommand(query, conn);
                 int affectedRowsOfProject = cmd.ExecuteNonQuery();
                 MessageBox.Show(affectedRowsOfProject + "rows inserted in Group!");
+                panel5.Show();
                 dataGridView1.Show();
                 conn.Close();
             }

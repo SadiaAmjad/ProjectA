@@ -24,11 +24,6 @@ namespace ProjectA_DB
            
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -170,56 +165,25 @@ namespace ProjectA_DB
                 string query = "Select p.Id, p.FirstName,p.LastName,p.Contact,p.Email,p.DateOfBirth,p.Gender,s.RegistrationNo from Person as p Inner join Student as s on p.Id = s.Id ";
                 SqlCommand b = new SqlCommand(query, con);
 
-                /*   SqlDataReader rdr = b.ExecuteReader();
-                   rdr.Read();
-                   while (rdr.Read())
-                   {
-                       int n = dataGridView1.Rows.Add();
-
-
-                       int cellNum = 0;
-                       int rowNum = 0;
-                       foreach (DataGridViewRow row in dataGridView1.Rows)
-                       {
-                           cellNum = cellNum + 1;
-                           dataGridView1.Rows[rowNum].Cells[0].Value = cellNum;
-                           rowNum = rowNum + 1;
-                       }
-
-                       dataGridView1.Rows[n].Cells[0].Value = rdr["Id"].ToString();
-                       dataGridView1.Rows[n].Cells[1].Value = rdr["FirstName"].ToString();
-                       dataGridView1.Rows[n].Cells[2].Value = rdr["LastName"].ToString();
-                       dataGridView1.Rows[n].Cells[3].Value = rdr["Contact"].ToString();
-                       dataGridView1.Rows[n].Cells[4].Value = rdr["Email"].ToString();
-                       dataGridView1.Rows[n].Cells[5].Value = rdr["DateOfBirth"].ToString();
-                       dataGridView1.Rows[n].Cells[6].Value = rdr["Gender"].ToString();
-                       dataGridView1.Rows[n].Cells[7].Value = rdr["RegistrationNo"].ToString();
-
-                       dataGridView1.Rows[n].Cells[0].Value = Convert.ToInt16(rdr.GetValue(0));
-                       dataGridView1.Rows[n].Cells[1].Value = rdr.GetString(1);
-                       dataGridView1.Rows[n].Cells[2].Value = rdr.GetString(2);
-                       dataGridView1.Rows[n].Cells[3].Value = rdr.GetString(3);
-                       dataGridView1.Rows[n].Cells[4].Value = rdr.GetString(4);
-                       dataGridView1.Rows[n].Cells[5].Value = rdr.GetValue(5);
-                       dataGridView1.Rows[n].Cells[6].Value = rdr.GetValue(6);
-                       dataGridView1.Rows[n].Cells[7].Value = rdr.GetString(7);
-
-                   }*/
                 SqlDataAdapter ad = new SqlDataAdapter(query, con);
 
                 DataTable dt = new DataTable();
                 ad.Fill(dt);
                 dataGridView1.DataSource = dt;
-                //dt.Columns["FirstName"].ColumnName = "First Name";
-                //dt.Columns["LastName"].ColumnName = "Last Name";
-
-                //dt.Columns["DateOfBirth"].ColumnName = "Date Of Birth";
-                //dt.Columns["Gender"].ColumnName = "Gender";
                 dataGridView1.Columns["Delete"].DisplayIndex = 9;
                 dataGridView1.Columns["Update"].DisplayIndex = 8;
                 dataGridView1.Columns["Id"].Visible = false;
+                
+                DataGridViewButtonColumn c = (DataGridViewButtonColumn)dataGridView1.Columns["Delete"];
+                c.FlatStyle = FlatStyle.Popup;
+                c.DefaultCellStyle.ForeColor = Color.WhiteSmoke;
+                c.DefaultCellStyle.BackColor = Color.Crimson;
+
+                DataGridViewButtonColumn c1 = (DataGridViewButtonColumn)dataGridView1.Columns["Update"];
+                c1.FlatStyle = FlatStyle.Popup;
+                c1.DefaultCellStyle.ForeColor = Color.WhiteSmoke;
+                c1.DefaultCellStyle.BackColor = Color.Crimson;
                 con.Close();
-                //string q = "select FirstName,LastName,Contact,Email,DateOfBirth,Gender,RegistrationNo from Person cross join Student";
             }
             catch (Exception ex)
             {
@@ -244,6 +208,52 @@ namespace ProjectA_DB
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void circularButton3_Click(object sender, EventArgs e)
+        {
+            FYPM h = new FYPM();
+            h.Show();
+            this.Close();
+        }
+
+        private void circularButton1_Click(object sender, EventArgs e)
+        {
+
+            AddInformation o = new AddInformation();
+            o.Show();
+            this.Close();
+        }
+
+        private void circularButton2_Click(object sender, EventArgs e)
+        {
+
             try
             {
                 SqlConnection con = new SqlConnection(conString);
@@ -264,27 +274,15 @@ namespace ProjectA_DB
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void circularButton4_Click(object sender, EventArgs e)
         {
-
-            AddInformation o = new AddInformation();
-            o.Show();
-            this.Close();
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            FYPM h = new FYPM();
-            h.Show();
-            this.Close();
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-
             FirstName1.Clear();
             LastANme1.Clear();
             RegistrationNumber1.Text = "";
@@ -294,7 +292,7 @@ namespace ProjectA_DB
             dateTimePicker1.Text = "";
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void circularButton5_Click(object sender, EventArgs e)
         {
 
             int lookup_idd = 0;
@@ -398,8 +396,9 @@ namespace ProjectA_DB
             }
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void circularButton6_Click(object sender, EventArgs e)
         {
+
             FirstName1.Clear();
             LastANme1.Clear();
             RegistrationNumber1.Text = "";
