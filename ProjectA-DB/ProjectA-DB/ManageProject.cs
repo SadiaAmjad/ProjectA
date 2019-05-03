@@ -103,13 +103,26 @@ namespace ProjectA_DB
                     {
                         using (SqlConnection con = new SqlConnection(conURL))
                         {
-                            int d = dataGridView1.CurrentCell.RowIndex;
+
+                            int d2 = dataGridView1.CurrentCell.RowIndex;
                             con.Open();
+                            int G2 = Convert.ToInt32(dataGridView1.Rows[d2].Cells["Id"].Value);
+                            string Q = String.Format("Delete from ProjectAdvisor where ProjectId = '" + G2 + "'");
+                            SqlCommand cmd2 = new SqlCommand(Q, con);
+                            int k3 = cmd2.ExecuteNonQuery();
+                           // MessageBox.Show(k3 + "rows deleted from ProjectAdvisor!");
+
+                            string Q3 = String.Format("Delete from GroupProject where ProjectId = '" + G2 + "'");
+                            SqlCommand cmd3 = new SqlCommand(Q3, con);
+                            int k4 = cmd3.ExecuteNonQuery();
+                            //MessageBox.Show(k4 + "rows deleted from ProjectAdvisor!");
+
+                            int d = dataGridView1.CurrentCell.RowIndex;
                             int G = Convert.ToInt32(dataGridView1.Rows[d].Cells["Id"].Value);
                             string Q2 = String.Format("Delete from Project where Id = '" + G + "'");
                             SqlCommand cmd1 = new SqlCommand(Q2, con);
                             int k = cmd1.ExecuteNonQuery();
-                            MessageBox.Show(k + "rows deleted from Project!");
+                            MessageBox.Show(k + "rows deleted!");
                             con.Close();
                             dataGridView1.Rows.RemoveAt(d);
                         }

@@ -37,25 +37,29 @@ namespace ProjectA_DB
 
                             //int n = dataGridView1.Rows.Add();
                             con.Open();
-                            int G = Convert.ToInt32(dataGridView1.Rows[d].Cells["ID"].Value);
-                            string query = "select Id From Person where Id = @Id";
-                            SqlCommand b = new SqlCommand(query, con);
-                            b.Parameters.Add(new SqlParameter("@Id", SqlDbType.Int));
-                            b.Parameters["@Id"].Value = G;
-                            // cmd.Parameters.Add(new SqlParameter("@Value", this.Gender1.Text));
-                            int w = (int)b.ExecuteScalar();
+                            int G = Convert.ToInt32(dataGridView1.Rows[d].Cells["Id"].Value);
+
+                            string Q = String.Format("Delete from ProjectAdvisor where AdvisorId = '" + G + "'");
+                            SqlCommand cmd3 = new SqlCommand(Q, con);
+                            int k = cmd3.ExecuteNonQuery();
+
+
+                            //string query = "select Id From Person where Id = @Id";
+                            //SqlCommand b = new SqlCommand(query, con);
+                            //b.Parameters.Add(new SqlParameter("@Id", SqlDbType.Int));
+                            //b.Parameters["@Id"].Value = G;
+                            //int w = (int)b.ExecuteScalar();
 
                             string Q2 = String.Format("Delete from Advisor where Id = @Id");
                             SqlCommand cmd1 = new SqlCommand(Q2, con);
                             cmd1.Parameters.Add(new SqlParameter("@Id", G));
-                            // b.Parameters["@ID"].Value = w;
-                            int k = cmd1.ExecuteNonQuery();
-                            MessageBox.Show(k + "rows deleted from Advisor!");
+                            int k3 = cmd1.ExecuteNonQuery();
+                            MessageBox.Show(k3 + "rows deleted!");
 
                             string Q1 = String.Format("Delete from Person where Id = @Id");
                             SqlCommand cmd = new SqlCommand(Q1, con);
                             cmd.Parameters.Add(new SqlParameter("@Id", SqlDbType.Int));
-                            cmd.Parameters["@Id"].Value = w;
+                            cmd.Parameters["@Id"].Value = G;
                             int h = cmd.ExecuteNonQuery();
                             MessageBox.Show(h + "rows Deleted from Person!");
                             con.Close();
@@ -77,10 +81,8 @@ namespace ProjectA_DB
                             con.Open();
                             int d = dataGridView1.CurrentCell.RowIndex;
                             int G = Convert.ToInt32(dataGridView1.Rows[d].Cells["Id"].Value);
-                            string query = String.Format("Select p.FirstName,p.LastName,p.Contact,p.Email,p.DateOfBirth,p.Gender,s.Designation,s.Salary from Person as p Inner join Advisor as s on p.Id = s.Id where p.Id = @Id");
+                            string query = String.Format("Select p.FirstName,p.LastName,p.Contact,p.Email,p.DateOfBirth,p.Gender,s.Designation,s.Salary from Person as p Inner join Advisor as s on p.Id = s.Id where p.Id = '"+G+"'");
                             SqlCommand cmd1 = new SqlCommand(query, con);
-                            cmd1.Parameters.Add(new SqlParameter("@Id", SqlDbType.Int));
-                            cmd1.Parameters["@Id"].Value = G;
                             SqlDataReader rdr = cmd1.ExecuteReader();
                             if (rdr.HasRows)
                             {
@@ -90,6 +92,7 @@ namespace ProjectA_DB
                                     ULastANme1.Text = rdr.GetString(1);
                                     UContact1.Text = rdr.GetString(2);
                                     UEmail1.Text = rdr.GetString(3);
+                                    Usalary1.Text = Convert.ToString(rdr.GetDecimal(7));
                                     dateTimePicker1.Value = Convert.ToDateTime(rdr.GetValue(4));
                                     if (Convert.ToInt32(rdr.GetValue(5)) == 2)
                                     {
@@ -99,27 +102,26 @@ namespace ProjectA_DB
                                     {
                                         UGender1.Text = "Male";
                                     }
-                                    if (Convert.ToInt32(rdr.GetValue(6)) == 6)
+                                    if ((Convert.ToInt32(rdr.GetValue(6))) == 6)
                                     {
                                         UDesignation.Text = "Professor";
                                     }
-                                    else if(Convert.ToInt32(rdr.GetValue(6)) == 7)
+                                    else if((Convert.ToInt32(rdr.GetValue(6))) == 7)
                                     {
                                         UDesignation.Text = "Associate Professor";
                                     }
-                                    else if(Convert.ToInt32(rdr.GetValue(6)) == 8)
+                                    else if((Convert.ToInt32(rdr.GetValue(6))) == 8)
                                     {
-                                        UDesignation.Text = " Assistant Professor";
+                                        UDesignation.Text = "Assisstant Professor";
                                     }
-                                    else if (Convert.ToInt32(rdr.GetValue(6)) == 9)
+                                    else if ((Convert.ToInt32(rdr.GetValue(6))) == 9)
                                     {
-                                        UDesignation.Text = " Lecturer";
+                                        UDesignation.Text = "Lecturer";
                                     }
                                     else
                                     {
-                                        UDesignation.Text = " Industry Professional";
+                                        UDesignation.Text = "Industry Professional";
                                     }
-                                    Usalary1.Text = Convert.ToString(rdr.GetDecimal(7));
                                 }
                             }
                             else
@@ -359,40 +361,33 @@ namespace ProjectA_DB
                         {
                             con.Open();
                             int d = dataGridView1.CurrentCell.RowIndex;
-                            int G = Convert.ToInt32(dataGridView1.Rows[d].Cells["ID"].Value);
-                            string query = "select p.Id From Person as p join Advisor s on p.Id = s.Id where p.Id = @Id";
-                            SqlCommand b = new SqlCommand(query, con);
-                            b.Parameters.Add(new SqlParameter("@Id", SqlDbType.Int));
-                            b.Parameters["@Id"].Value = G;
-                            int w = (int)b.ExecuteScalar();
+                            int G = Convert.ToInt32(dataGridView1.Rows[d].Cells["Id"].Value);
+                            //string query = "select p.Id From Person as p join Advisor s on p.Id = s.Id where p.Id = '"+G+"'";
+                            //SqlCommand b = new SqlCommand(query, con);
+                            //int w = (int)b.ExecuteScalar();
 
 
                             string G2 = "GENDER";
-                            string query2 = string.Format("Select Id from dbo.Lookup WHERE Category = @Category and Value = @Value");
+                            string query2 = string.Format("Select Id from dbo.Lookup WHERE Category = '"+G2+"' and Value = '"+UGender1.Text+"'");
                             SqlCommand cmd2 = new SqlCommand(query2, con);
-                            cmd2.Parameters.Add(new SqlParameter("@Category", G2));
-                            cmd2.Parameters.Add(new SqlParameter("@Value", this.UGender1.Text));
+                            //cmd2.Parameters.Add(new SqlParameter("@Category", G2));
+                            //cmd2.Parameters.Add(new SqlParameter("@Value", this.UGender1.Text));
                             lookup_idd = (int)cmd2.ExecuteScalar();
 
                             string G1 = "DESIGNATION";
-                            string query1 = string.Format("Select Id from dbo.Lookup WHERE Category = @Category and Value = @Value");
+                            string query1 = "Select Id from dbo.Lookup WHERE Category = '"+G1+"' and Value = '"+UDesignation.Text+"'";
                             SqlCommand cmd1 = new SqlCommand(query1, con);
-                            cmd1.Parameters.Add(new SqlParameter("@Category", G1));
-                            cmd1.Parameters.Add(new SqlParameter("@Value", this.UDesignation.Text));
+                            //cmd1.Parameters.Add(new SqlParameter("@Category", G1));
+                            //cmd1.Parameters.Add(new SqlParameter("@Value", this.UDesignation.Text));
                             int id1 = (int)cmd1.ExecuteScalar();
 
-                            string query3 = "UPDATE Person SET FirstName = '" + UFirstName1.Text + "',LastName = '" + ULastANme1.Text + "',Contact = '" + UContact1.Text + "',Email = '" + UEmail1.Text + "',DateOfBirth = '" + Convert.ToDateTime(dateTimePicker1.Value) + "',Gender = '" + lookup_idd + "' where Id = " + G;
-
+                            string query3 = "UPDATE Person SET FirstName = '" + UFirstName1.Text + "',LastName = '" + ULastANme1.Text + "',Contact = '" + UContact1.Text + "',Email = '" + UEmail1.Text + "',DateOfBirth = '" + Convert.ToDateTime(dateTimePicker1.Value) + "',Gender = '" + lookup_idd + "' where Id = '"+G+"'";
+                        
                             SqlCommand cmd = new SqlCommand(query3, con);
-
                             int f = cmd.ExecuteNonQuery();
                             MessageBox.Show("Record Updated Successfully in Person");
-
-                            string query4 = "UPDATE Advisor SET Id = '" + G + "',Designation = '" + id1 + "',Salary = '" + Convert.ToDecimal(Usalary1.Text) + "' where Id = " + G;
-
-
-                            SqlCommand cmd3 = new SqlCommand(query3, con);
-
+                            string query4 = "UPDATE Advisor SET Id = '" + G + "',Designation = '" + id1 + "',Salary = '" + Convert.ToDecimal(Usalary1.Text) + "' where Id = '"+G+"'";
+                            SqlCommand cmd3 = new SqlCommand(query4, con);
                             int s = cmd3.ExecuteNonQuery();
                             MessageBox.Show("Record Updated Successfully in Advisor");
 

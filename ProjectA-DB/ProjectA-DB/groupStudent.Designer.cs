@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,8 +38,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(groupStudent));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.AssignProject = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -59,7 +60,6 @@
             this.circularButton5 = new RoundButtonDemo.CircularButton();
             this.circularButton4 = new RoundButtonDemo.CircularButton();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.AssignProject = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -102,6 +102,18 @@
             this.dataGridView1.Size = new System.Drawing.Size(869, 286);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // AssignProject
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(63)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
+            this.AssignProject.DefaultCellStyle = dataGridViewCellStyle1;
+            this.AssignProject.HeaderText = "Assign Project";
+            this.AssignProject.Name = "AssignProject";
+            this.AssignProject.Text = "Assign";
+            this.AssignProject.UseColumnTextForButtonValue = true;
             // 
             // label1
             // 
@@ -217,10 +229,7 @@
             this.dataGridView3.Location = new System.Drawing.Point(0, 0);
             this.dataGridView3.Name = "dataGridView3";
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
@@ -308,7 +317,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(869, 286);
             this.panel1.TabIndex = 69;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -318,7 +326,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(869, 263);
             this.panel2.TabIndex = 16;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -405,18 +412,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(869, 286);
             this.panel5.TabIndex = 71;
-            // 
-            // AssignProject
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(63)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
-            this.AssignProject.DefaultCellStyle = dataGridViewCellStyle1;
-            this.AssignProject.HeaderText = "Assign Project";
-            this.AssignProject.Name = "AssignProject";
-            this.AssignProject.Text = "Assign";
-            this.AssignProject.UseColumnTextForButtonValue = true;
             // 
             // groupStudent
             // 

@@ -82,7 +82,7 @@ namespace ProjectA_DB
                                 {
 
                                 }
-                                if (dataGridView1.Rows.Count == 0)
+                                else if (dataGridView1.Rows.Count == 0)
                                 {
                                     MessageBox.Show("No more data to add");
                                     this.Close();

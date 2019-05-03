@@ -31,22 +31,32 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet1 = new ProjectA_DB.DataSet1();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.DataTable1TableAdapter = new ProjectA_DB.DataSet1TableAdapters.DataTable1TableAdapter();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.circularButton1 = new RoundButtonDemo.CircularButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.circularButton1 = new RoundButtonDemo.CircularButton();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // DataTable1BindingSource
+            // 
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.DataTable1BindingSource.DataSource = this.DataSet1;
+            // 
+            // DataSet1
+            // 
+            this.DataSet1.DataSetName = "DataSet1";
+            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -61,16 +71,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(884, 530);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
-            // 
-            // DataTable1BindingSource
-            // 
-            this.DataTable1BindingSource.DataMember = "DataTable1";
-            this.DataTable1BindingSource.DataSource = this.DataSet1;
-            // 
-            // DataSet1
-            // 
-            this.DataSet1.DataSetName = "DataSet1";
-            this.DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // DataTable1TableAdapter
             // 
@@ -88,6 +88,21 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(884, 86);
             this.panel3.TabIndex = 47;
+            // 
+            // circularButton1
+            // 
+            this.circularButton1.BackColor = System.Drawing.Color.Crimson;
+            this.circularButton1.FlatAppearance.BorderSize = 0;
+            this.circularButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularButton1.Font = new System.Drawing.Font("Blacker Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.circularButton1.Location = new System.Drawing.Point(621, 12);
+            this.circularButton1.Name = "circularButton1";
+            this.circularButton1.Size = new System.Drawing.Size(63, 61);
+            this.circularButton1.TabIndex = 61;
+            this.circularButton1.Text = "Back";
+            this.circularButton1.UseVisualStyleBackColor = false;
+            this.circularButton1.Click += new System.EventHandler(this.circularButton1_Click);
             // 
             // label2
             // 
@@ -128,21 +143,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(884, 530);
             this.panel1.TabIndex = 48;
-            // 
-            // circularButton1
-            // 
-            this.circularButton1.BackColor = System.Drawing.Color.Crimson;
-            this.circularButton1.FlatAppearance.BorderSize = 0;
-            this.circularButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularButton1.Font = new System.Drawing.Font("Blacker Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.circularButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.circularButton1.Location = new System.Drawing.Point(621, 12);
-            this.circularButton1.Name = "circularButton1";
-            this.circularButton1.Size = new System.Drawing.Size(63, 61);
-            this.circularButton1.TabIndex = 61;
-            this.circularButton1.Text = "Back";
-            this.circularButton1.UseVisualStyleBackColor = false;
-            this.circularButton1.Click += new System.EventHandler(this.circularButton1_Click);
             // 
             // Report
             // 

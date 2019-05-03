@@ -65,10 +65,16 @@ namespace ProjectA_DB
                             int d = dataGridView1.CurrentCell.RowIndex;
                             con.Open();
                             int G = Convert.ToInt32(dataGridView1.Rows[d].Cells["Id"].Value);
+
+                            string Q3 = String.Format("Delete from GroupEvaluation where EvaluationId = '" + G + "'");
+                            SqlCommand cmd2 = new SqlCommand(Q3, con);
+                            int k3 = cmd2.ExecuteNonQuery();
+                           // MessageBox.Show(k3 + "rows deleted from group Evaluation!");
+
                             string Q2 = String.Format("Delete from Evaluation where Id = '" + G + "'");
                             SqlCommand cmd1 = new SqlCommand(Q2, con);
                             int k = cmd1.ExecuteNonQuery();
-                            MessageBox.Show(k + "rows deleted from Evaluation!");
+                            MessageBox.Show(k + "rows deleted!");
                             con.Close();
                             dataGridView1.Rows.RemoveAt(d);
                         }

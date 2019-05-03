@@ -293,7 +293,7 @@ namespace ProjectA_DB
                             {
 
                             }
-                            if(dataGridView2.Rows.Count == 0)
+                            else if(dataGridView2.Rows.Count == 0)
                             {
                                 MessageBox.Show("No more data to add");
                                 dataGridView2.Hide();
@@ -367,7 +367,7 @@ namespace ProjectA_DB
                             {
 
                             }
-                            if (dataGridView3.Rows.Count == 0)
+                            else if (dataGridView3.Rows.Count == 0)
                             {
                                 MessageBox.Show("No more data to add");
                                 dataGridView3.Hide();
@@ -444,7 +444,7 @@ namespace ProjectA_DB
                             {
 
                             }
-                            if(dataGridView4.Rows.Count == 0)
+                            else if(dataGridView4.Rows.Count == 0)
                             {
                                 MessageBox.Show("No more data to add");
 
@@ -481,37 +481,6 @@ namespace ProjectA_DB
         {
             
         }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 

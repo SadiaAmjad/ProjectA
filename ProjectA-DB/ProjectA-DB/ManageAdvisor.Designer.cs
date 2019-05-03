@@ -32,6 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageAdvisor));
             this.UpdateAdvisorData = new System.Windows.Forms.GroupBox();
+            this.circularButton6 = new RoundButtonDemo.CircularButton();
+            this.circularButton5 = new RoundButtonDemo.CircularButton();
+            this.circularButton4 = new RoundButtonDemo.CircularButton();
             this.UDesignation = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Usalary1 = new System.Windows.Forms.TextBox();
@@ -53,11 +56,8 @@
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.circularButton6 = new RoundButtonDemo.CircularButton();
-            this.circularButton5 = new RoundButtonDemo.CircularButton();
-            this.circularButton4 = new RoundButtonDemo.CircularButton();
             this.circularButton3 = new RoundButtonDemo.CircularButton();
+            this.label10 = new System.Windows.Forms.Label();
             this.circularButton1 = new RoundButtonDemo.CircularButton();
             this.circularButton2 = new RoundButtonDemo.CircularButton();
             this.UpdateAdvisorData.SuspendLayout();
@@ -97,6 +97,51 @@
             this.UpdateAdvisorData.TabStop = false;
             this.UpdateAdvisorData.Text = "Update Advisor Data";
             // 
+            // circularButton6
+            // 
+            this.circularButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(96)))), ((int)(((byte)(42)))));
+            this.circularButton6.FlatAppearance.BorderSize = 0;
+            this.circularButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularButton6.Font = new System.Drawing.Font("Blacker Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularButton6.ForeColor = System.Drawing.Color.White;
+            this.circularButton6.Location = new System.Drawing.Point(491, 378);
+            this.circularButton6.Name = "circularButton6";
+            this.circularButton6.Size = new System.Drawing.Size(64, 56);
+            this.circularButton6.TabIndex = 56;
+            this.circularButton6.Text = "Cancel";
+            this.circularButton6.UseVisualStyleBackColor = false;
+            this.circularButton6.Click += new System.EventHandler(this.circularButton6_Click);
+            // 
+            // circularButton5
+            // 
+            this.circularButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
+            this.circularButton5.FlatAppearance.BorderSize = 0;
+            this.circularButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularButton5.Font = new System.Drawing.Font("Blacker Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularButton5.ForeColor = System.Drawing.Color.White;
+            this.circularButton5.Location = new System.Drawing.Point(417, 377);
+            this.circularButton5.Name = "circularButton5";
+            this.circularButton5.Size = new System.Drawing.Size(64, 56);
+            this.circularButton5.TabIndex = 55;
+            this.circularButton5.Text = "Update";
+            this.circularButton5.UseVisualStyleBackColor = false;
+            this.circularButton5.Click += new System.EventHandler(this.circularButton5_Click);
+            // 
+            // circularButton4
+            // 
+            this.circularButton4.BackColor = System.Drawing.Color.Crimson;
+            this.circularButton4.FlatAppearance.BorderSize = 0;
+            this.circularButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.circularButton4.Font = new System.Drawing.Font("Blacker Text", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.circularButton4.ForeColor = System.Drawing.Color.White;
+            this.circularButton4.Location = new System.Drawing.Point(341, 377);
+            this.circularButton4.Name = "circularButton4";
+            this.circularButton4.Size = new System.Drawing.Size(64, 56);
+            this.circularButton4.TabIndex = 54;
+            this.circularButton4.Text = "Clear";
+            this.circularButton4.UseVisualStyleBackColor = false;
+            this.circularButton4.Click += new System.EventHandler(this.circularButton4_Click);
+            // 
             // UDesignation
             // 
             this.UDesignation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -108,7 +153,7 @@
             this.UDesignation.Items.AddRange(new object[] {
             "Professor",
             "Associate Professor",
-            "Assistant Professor",
+            "Assisstant Professor",
             "Lecturer",
             "Industry Professional"});
             this.UDesignation.Location = new System.Drawing.Point(233, 305);
@@ -377,64 +422,6 @@
             this.panel2.Size = new System.Drawing.Size(868, 449);
             this.panel2.TabIndex = 10;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Blacker Text", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label10.Image = ((System.Drawing.Image)(resources.GetObject("label10.Image")));
-            this.label10.Location = new System.Drawing.Point(355, 153);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(138, 31);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "ADVISOR";
-            // 
-            // circularButton6
-            // 
-            this.circularButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(96)))), ((int)(((byte)(42)))));
-            this.circularButton6.FlatAppearance.BorderSize = 0;
-            this.circularButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularButton6.Font = new System.Drawing.Font("Blacker Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.circularButton6.ForeColor = System.Drawing.Color.White;
-            this.circularButton6.Location = new System.Drawing.Point(491, 378);
-            this.circularButton6.Name = "circularButton6";
-            this.circularButton6.Size = new System.Drawing.Size(64, 56);
-            this.circularButton6.TabIndex = 56;
-            this.circularButton6.Text = "Cancel";
-            this.circularButton6.UseVisualStyleBackColor = false;
-            this.circularButton6.Click += new System.EventHandler(this.circularButton6_Click);
-            // 
-            // circularButton5
-            // 
-            this.circularButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(149)))), ((int)(((byte)(0)))));
-            this.circularButton5.FlatAppearance.BorderSize = 0;
-            this.circularButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularButton5.Font = new System.Drawing.Font("Blacker Text", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.circularButton5.ForeColor = System.Drawing.Color.White;
-            this.circularButton5.Location = new System.Drawing.Point(417, 377);
-            this.circularButton5.Name = "circularButton5";
-            this.circularButton5.Size = new System.Drawing.Size(64, 56);
-            this.circularButton5.TabIndex = 55;
-            this.circularButton5.Text = "Update";
-            this.circularButton5.UseVisualStyleBackColor = false;
-            this.circularButton5.Click += new System.EventHandler(this.circularButton5_Click);
-            // 
-            // circularButton4
-            // 
-            this.circularButton4.BackColor = System.Drawing.Color.Crimson;
-            this.circularButton4.FlatAppearance.BorderSize = 0;
-            this.circularButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.circularButton4.Font = new System.Drawing.Font("Blacker Text", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.circularButton4.ForeColor = System.Drawing.Color.White;
-            this.circularButton4.Location = new System.Drawing.Point(341, 377);
-            this.circularButton4.Name = "circularButton4";
-            this.circularButton4.Size = new System.Drawing.Size(64, 56);
-            this.circularButton4.TabIndex = 54;
-            this.circularButton4.Text = "Clear";
-            this.circularButton4.UseVisualStyleBackColor = false;
-            this.circularButton4.Click += new System.EventHandler(this.circularButton4_Click);
-            // 
             // circularButton3
             // 
             this.circularButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(85)))), ((int)(((byte)(106)))));
@@ -449,6 +436,19 @@
             this.circularButton3.Text = "BACK";
             this.circularButton3.UseVisualStyleBackColor = false;
             this.circularButton3.Click += new System.EventHandler(this.circularButton3_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Blacker Text", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label10.Image = ((System.Drawing.Image)(resources.GetObject("label10.Image")));
+            this.label10.Location = new System.Drawing.Point(355, 153);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(138, 31);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "ADVISOR";
             // 
             // circularButton1
             // 

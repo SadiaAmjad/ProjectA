@@ -42,7 +42,7 @@ namespace ProjectA_DB
 
                             //int n = dataGridView1.Rows.Add();
                             con.Open();
-                            int G = Convert.ToInt32(dataGridView1.Rows[d].Cells["ID"].Value);
+                            int G = Convert.ToInt32(dataGridView1.Rows[d].Cells["Id"].Value);
                             string query = "select Id From Person where Id = @Id";
                             SqlCommand b = new SqlCommand(query, con);
                             b.Parameters.Add(new SqlParameter("@Id", SqlDbType.Int));
@@ -50,19 +50,30 @@ namespace ProjectA_DB
                             // cmd.Parameters.Add(new SqlParameter("@Value", this.Gender1.Text));
                             int w = (int)b.ExecuteScalar();
 
+                            //int G5 = Convert.ToInt32(dataGridView1.Rows[d].Cells["Id"].Value);
+                            //string query5 = "select StudentId From GroupStudent where StudentId = '"+G5+"'";
+                            //if(query5 == Convert.ToString(G5))
+                            //{
+                            //    SqlCommand b5 = new SqlCommand(query5, con);
+                            //    int w5 = (int)b5.ExecuteScalar();
+                            //}
+                           
+                            string Q3 = String.Format("Delete from GroupStudent where StudentId = @Id");
+                            SqlCommand cmd9 = new SqlCommand(Q3, con);
+                            cmd9.Parameters.Add(new SqlParameter("@Id", G));
+                            int v = cmd9.ExecuteNonQuery();
+
+
                             string Q2 = String.Format("Delete from Student where Id = @Id");
                             SqlCommand cmd1 = new SqlCommand(Q2, con);
                             cmd1.Parameters.Add(new SqlParameter("@Id", G));
-                            // b.Parameters["@ID"].Value = w;
                             int k = cmd1.ExecuteNonQuery();
-                            MessageBox.Show(k + "rows deleted from Student!");
 
                             string Q1 = String.Format("Delete from Person where Id = @Id");
                             SqlCommand cmd = new SqlCommand(Q1, con);
                             cmd.Parameters.Add(new SqlParameter("@Id", SqlDbType.Int));
                             cmd.Parameters["@Id"].Value = w;
                             int h = cmd.ExecuteNonQuery();
-                            MessageBox.Show(h + "rows Deleted from Person!");
                             con.Close();
                             dataGridView1.Rows.RemoveAt(d);
                             MessageBox.Show("Row Deleted");
@@ -370,10 +381,8 @@ namespace ProjectA_DB
                             MessageBox.Show("Record Updated Successfully in Person");
 
                             string query3 = "UPDATE Student SET Id = '" + G + "',RegistrationNo = '" + RegistrationNumber1.Text + "' where Id = " + G;
-
-
+                           
                             SqlCommand cmd3 = new SqlCommand(query3, con);
-
                             int s = cmd3.ExecuteNonQuery();
                             MessageBox.Show("Record Updated Successfully in Student");
 

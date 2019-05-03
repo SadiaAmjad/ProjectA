@@ -202,5 +202,10 @@ namespace ProjectA_DB
             k.Show();
             this.Close();
         }
+
+        private void AddAdvisorInformation_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

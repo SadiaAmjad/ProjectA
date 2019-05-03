@@ -256,7 +256,7 @@
             this.Desgnation1.Items.AddRange(new object[] {
             "Professor",
             "Associate Professor",
-            "Assistant Professor",
+            "Assisstant Professor",
             "Lecturer",
             "Industry Professional"});
             this.Desgnation1.Location = new System.Drawing.Point(176, 301);
@@ -407,6 +407,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddAdvisorInformation";
             this.Text = "Add Advisor Information";
+            this.Load += new System.EventHandler(this.AddAdvisorInformation_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
