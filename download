@@ -1,0 +1,116 @@
+diff --git a/reviewboard/reviews/fields.py b/reviewboard/reviews/fields.py
+index c0399b851b347d61ee674148da93b418c04ff91b..e14f4d1c127db0dadccd6e13d8e9c479e3c6c821 100644
+--- a/reviewboard/reviews/fields.py
++++ b/reviewboard/reviews/fields.py
+@@ -37,9 +37,6 @@ class BaseReviewRequestFieldSet(object):
+     field_classes = None
+     tag_name = None
+ 
+-    def __init__(self, review_request_details):
+-        self.review_request_details = review_request_details
+-
+     @classmethod
+     def is_empty(cls):
+         """Returns whether the fieldset is empty.
+@@ -79,6 +76,9 @@ class BaseReviewRequestFieldSet(object):
+             raise KeyError('"%s" is not a registered review request field'
+                            % field_id)
+ 
++    def __init__(self, review_request_details):
++        self.review_request_details = review_request_details
++
+ 
+ class BaseReviewRequestField(object):
+     """Base class for a field on a review request.
+@@ -173,22 +173,17 @@ class BaseReviewRequestField(object):
+         Subclasses can override ``render_change_entry_value_html`` to
+         change how the value itself will be rendered in the string.
+         """
+-        old_value = ''
+-        new_value = ''
++        s = ['<table class="changed">']
+ 
+         if 'old' in info:
+             old_value = info['old'][0]
+ 
+-        if 'new' in info:
+-            new_value = info['new'][0]
+-
+-        s = ['<table class="changed">']
+-
+-        if old_value:
+             s.append(self.render_change_entry_removed_value_html(
+                 info, old_value))
+ 
+-        if new_value:
++        if 'new' in info:
++            new_value = info['new'][0]
++
+             s.append(self.render_change_entry_added_value_html(
+                 info, new_value))
+ 
+@@ -197,21 +192,23 @@ class BaseReviewRequestField(object):
+         return ''.join(s)
+ 
+     def render_change_entry_added_value_html(self, info, value):
+-        value_html = self.render_change_entry_value_html(info, value)
++        if value:
++            value_html = self.render_change_entry_value_html(info, value)
++
++            if value_html:
++                return ('<tr class="new-value"><th class="marker">+</th>'
++                        '<td class="value">%s</td></tr>' % value_html)
+ 
+-        if value_html:
+-            return ('<tr class="new-value"><th class="marker">+</th>'
+-                    '<td class="value">%s</td></tr>' % value_html)
+-        else:
+             return ''
+ 
+     def render_change_entry_removed_value_html(self, info, value):
+-        value_html = self.render_change_entry_value_html(info, value)
++        if value:
++            value_html = self.render_change_entry_value_html(info, value)
++
++            if value_html:
++                return ('<tr class="old-value"><th class="marker">-</th>'
++                        '<td class="value">%s</td></tr>' % value_html)
+ 
+-        if value_html:
+-            return ('<tr class="old-value"><th class="marker">-</th>'
+-                    '<td class="value">%s</td></tr>' % value_html)
+-        else:
+             return ''
+ 
+     def render_change_entry_value_html(self, info, value):
+@@ -246,10 +243,11 @@ class BaseReviewRequestField(object):
+     def render_value(self, value):
+         """Renders the value in the field.
+ 
+-        By default, this converts to text and escapes it. This can be
+-        overridden if you need to render it in a more specific way.
++        By default, this converts the value to text and escapes it.
++        This can be overridden if you need to render it in a more
++        specific way.
+ 
+-        This must use ``value`` instead of ``self.value``.
++        This **must** use ``value`` instead of ``self.value``.
+         """
+         return escape(six.text_type(value or ''))
+ 
+@@ -476,13 +474,11 @@ class BaseTextAreaField(BaseEditableField):
+         new_value = ''
+ 
+         if 'old' in info:
+-            old_value = info['old'][0]
++            old_value = render_markdown(info['old'][0])
+ 
+         if 'new' in info:
+-            new_value = info['new'][0]
++            new_value = render_markdown(info['new'][0])
+ 
+-        old_value = render_markdown(old_value)
+-        new_value = render_markdown(new_value)
+         old_lines = list(iter_markdown_lines(old_value))
+         new_lines = list(iter_markdown_lines(new_value))
+ 
